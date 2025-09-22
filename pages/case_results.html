@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dava Sonuçları - Kanıtlanmış Başarı Hikayeleri | DH HUKUK BÜROSU</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+    <meta name="description"
+        content="DH HUKUK BÜROSU'nun kanıtlanmış başarı geçmişini, detaylı dava incelemeleri, uzlaşma sonuçları ve tüm çalışma alanlarındaki müvekkil başarı hikayeleriyle keşfedin." />
+    <script type="module"
+        src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Flegaledge5801back.builtwithrocket.new&_v=0.1.8"></script>
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="homepage.html">DH HUKUK BÜROSU</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="homepage.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="case_results.html">Dava Sonuçları</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="legal_resource_center.html">Hukuki Kaynaklar</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Diğer Sayfalar
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about_values.html">Hakkımızda</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="consultation_booking.html">Danışmanlık Al</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <select class="form-select me-2" onchange="changeLanguage(this.value)">
+                        <option value="tr" selected>🇹🇷 Türkçe</option>
+                        <option value="en">🇺🇸 English</option>
+                        <option value="de">🇩🇪 Deutsch</option>
+                        <option value="ru">🇷🇺 Русский</option>
+                    </select>
+                    <a href="consultation_booking.html" class="btn btn-outline-primary">Ücretsiz Danışmanlık</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <div class="md:hidden">
+        <button type="button" class="text-secondary-600 hover:text-primary" onclick="toggleMobileMenu()">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="md:hidden hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+            <a href="homepage.html" class="text-secondary-600 hover:text-primary block px-3 py-2">Ana Sayfa</a>
+            <a href="case_results.html" class="text-primary font-semibold block px-3 py-2">Dava Sonuçları</a>
+            <a href="legal_resource_center.html" class="text-secondary-600 hover:text-primary block px-3 py-2">Hukuki
+                Kaynaklar</a>
+            <a href="about_values.html" class="text-secondary-600 hover:text-primary block px-3 py-2">Hakkımızda</a>
+            <a href="client_portal.html" class="text-secondary-600 hover:text-primary block px-3 py-2">Müşteri
+                Portalı</a>
+
+            <!-- Mobile Language Selector -->
+            <div class="px-3 py-2">
+                <label class="block text-sm font-medium text-gray-700 mb-2">Dil / Language</label>
+                <select id="mobile-language-selector"
+                    class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500"
+                    onchange="changeLanguage(this.value)">
+                    <option value="tr" selected>🇹🇷 Türkçe</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="de">🇩🇪 Deutsch</option>
+                    <option value="ru">🇷🇺 Русский</option>
+                </select>
+            </div>
+
+            <a href="consultation_booking.html" class="btn-accent w-full text-center mt-4">Ücretsiz Danışmanlık</a>
+        </div>
+    </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section
+        class="relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2940&auto=format&fit=crop"
+                alt="Legal victory celebration" class="w-full h-full object-cover opacity-30"
+                onerror="this.src='https://images.pexels.com/photos/5668882/pexels-photo-5668882.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+            <div class="text-center">
+                <h1 class="font-playfair text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                    Kanıtlanmış Sonuçlar, <span class="text-accent">Gerçek Başarı</span>
+                </h1>
+                <p class="text-xl lg:text-2xl mb-8 text-gray-200 leading-relaxed max-w-4xl mx-auto">
+                    Başarı geçmişimiz kendi adına konuşuyor. Her müvekkil için olağanüstü sonuçlara ulaşma taahhüdümüzü
+                    gösteren detaylı dava incelemelerini ve sonuçlarını keşfedin.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aggregate Statistics Dashboard -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-3xl lg:text-4xl font-bold text-primary mb-4">Başarı Geçmişimiz</h2>
+                <p class="text-xl text-secondary-600 max-w-3xl mx-auto">
+                    Önemli olan rakamlar - tüm uygulama alanlarında gerçek müvekkiller için gerçek sonuçlar
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Total Settlements -->
+                <div class="card text-center group hover:shadow-custom-lg">
+                    <div
+                        class="w-16 h-16 bg-success-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-success-200 transition-custom">
+                        <svg class="w-8 h-8 text-success" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                    </div>
+                    <div class="text-3xl font-bold text-success mb-2">₺52.3M</div>
+                    <p class="text-secondary-600 font-semibold">Toplam Kazanım</p>
+                    <p class="text-sm text-secondary-500 mt-2">2018'den beri</p>
+                </div>
+
+                <!-- Average Resolution Time -->
+                <div class="card text-center group hover:shadow-custom-lg">
+                    <div
+                        class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent-200 transition-custom">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" />
+                        </svg>
+                    </div>
+                    <div class="text-3xl font-bold text-accent mb-2">8.2</div>
+                    <p class="text-secondary-600 font-semibold">Ay Ortalama</p>
+                    <p class="text-sm text-secondary-500 mt-2">Dava Çözüm Süresi</p>
+                </div>
+
+                <!-- Client Satisfaction -->
+                <div class="card text-center group hover:shadow-custom-lg">
+                    <div
+                        class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-200 transition-custom">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+                        </svg>
+                    </div>
+                    <div class="text-3xl font-bold text-primary mb-2">95%</div>
+                    <p class="text-secondary-600 font-semibold">Müvekkil Memnuniyeti</p>
+                    <p class="text-sm text-secondary-500 mt-2">847 değerlendirme üzerinden</p>
+                </div>
+
+                <!-- Cases Won -->
+                <div class="card text-center group hover:shadow-custom-lg">
+                    <div
+                        class="w-16 h-16 bg-warning-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-warning-200 transition-custom">
+                        <svg class="w-8 h-8 text-warning" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                        </svg>
+                    </div>
+                    <div class="text-3xl font-bold text-warning mb-2">2,847</div>
+                    <p class="text-secondary-600 font-semibold">Kazanılan Dava</p>
+                    <p class="text-sm text-secondary-500 mt-2">Sadece bu yıl</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Filters -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl p-8 shadow-custom-lg">
+                <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
+                    <h3 class="font-playfair text-2xl font-bold text-primary mb-4 lg:mb-0">Dava Sonuçlarını Filtrele
+                    </h3>
+                    <button onclick="resetFilters()"
+                        class="text-accent hover:text-accent-700 font-semibold transition-custom">
+                        Filtreleri Sıfırla
+                    </button>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Practice Area Filter -->
+                    <div>
+                        <label class="block text-sm font-semibold text-secondary-700 mb-2">Uygulama Alanı</label>
+                        <select id="practiceAreaFilter" class="input-field" onchange="filterCases()">
+                            <option value>Tüm Uygulama Alanları</option>
+                            <option value="personal-injury">Kişisel Yaralanma</option>
+                            <option value="family-law">Aile Hukuku</option>
+                            <option value="business-law">Ticaret Hukuku</option>
+                            <option value="estate-planning">Miras Hukuku</option>
+                            <option value="criminal-defense">Ceza Hukuku</option>
+                            <option value="real-estate">Gayrimenkul Hukuku</option>
+                        </select>
+                    </div>
+
+                    <!-- Settlement Range Filter -->
+                    <div>
+                        <label class="block text-sm font-semibold text-secondary-700 mb-2">Uzlaşma Aralığı</label>
+                        <select id="settlementFilter" class="input-field" onchange="filterCases()">
+                            <option value>Tüm Tutarlar</option>
+                            <option value="under-100k">₺100B Altı</option>
+                            <option value="100k-500k">₺100B - ₺500B</option>
+                            <option value="500k-1m">₺500B - ₺1M</option>
+                            <option value="1m-plus">₺1M+</option>
+                        </select>
+                    </div>
+
+                    <!-- Resolution Method Filter -->
+                    <div>
+                        <label class="block text-sm font-semibold text-secondary-700 mb-2">Çözüm Yöntemi</label>
+                        <select id="resolutionFilter" class="input-field" onchange="filterCases()">
+                            <option value>Tüm Yöntemler</option>
+                            <option value="settlement">Uzlaşma</option>
+                            <option value="trial-verdict">Mahkeme Kararı</option>
+                            <option value="mediation">Arabuluculuk</option>
+                            <option value="arbitration">Tahkim</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Case Studies -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-3xl lg:text-4xl font-bold text-primary mb-4">Öne Çıkan Dava İncelemeleri
+                </h2>
+                <p class="text-xl text-secondary-600 max-w-3xl mx-auto">
+                    Müvekkillerimizin karmaşık hukuki zorluklarını nasıl aştığımızın detaylı hikayeleri
+                </p>
+            </div>
+
+            <div id="caseStudiesContainer" class="space-y-12">
+                <!-- Case Study 1: Personal Injury -->
+                <div class="case-study" data-practice="personal-injury" data-settlement="1m-plus"
+                    data-resolution="settlement">
+                    <div class="grid lg:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <div class="flex items-center mb-4">
+                                <span
+                                    class="bg-success-100 text-success-700 px-3 py-1 rounded-full text-sm font-semibold mr-3">Personal
+                                    Injury</span>
+                                <span class="text-secondary-500 text-sm">Resolved: March 2024</span>
+                            </div>
+                            <h3 class="font-playfair text-2xl font-bold text-primary mb-4">
+                                Construction Worker Receives $2.3M After Workplace Accident
+                            </h3>
+                            <div class="space-y-4 text-secondary-700">
+                                <p><strong>The Challenge:</strong> Client suffered severe spinal injuries due to
+                                    inadequate safety protocols at construction site, facing permanent disability and
+                                    loss of income.</p>
+                                <p><strong>Our Approach:</strong> Comprehensive investigation revealed multiple safety
+                                    violations. We assembled expert witnesses and documented long-term care needs.</p>
+                                <p><strong>The Outcome:</strong> Secured $2.3M settlement covering medical expenses,
+                                    lost wages, and pain & suffering, ensuring client's financial security.</p>
+                            </div>
+                            <div class="mt-6 p-4 bg-success-50 rounded-lg">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-success-700 font-semibold">Settlement Amount:</span>
+                                    <span class="text-2xl font-bold text-success">$2.3M</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2940&auto=format&fit=crop"
+                                alt="Construction site safety" class="w-full h-64 object-cover rounded-lg shadow-custom"
+                                onerror="this.src='https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                            <div class="absolute top-4 right-4 bg-white rounded-full p-2">
+                                <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 2: Family Law -->
+                <div class="case-study" data-practice="family-law" data-settlement="100k-500k"
+                    data-resolution="mediation">
+                    <div class="grid lg:grid-cols-2 gap-8 items-center">
+                        <div class="lg:order-2">
+                            <div class="flex items-center mb-4">
+                                <span
+                                    class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm font-semibold mr-3">Family
+                                    Law</span>
+                                <span class="text-secondary-500 text-sm">Resolved: January 2024</span>
+                            </div>
+                            <h3 class="font-playfair text-2xl font-bold text-primary mb-4">
+                                Complex Custody Case Resolved Through Collaborative Mediation
+                            </h3>
+                            <div class="space-y-4 text-secondary-700">
+                                <p><strong>The Challenge:</strong> High-conflict divorce involving international custody
+                                    disputes and complex asset division across multiple states.</p>
+                                <p><strong>Our Approach:</strong> Utilized collaborative law principles and skilled
+                                    mediation to protect children's interests while achieving fair asset distribution.
+                                </p>
+                                <p><strong>The Outcome:</strong> Achieved amicable resolution with shared custody
+                                    arrangement and $450K asset settlement, preserving family relationships.</p>
+                            </div>
+                            <div class="mt-6 p-4 bg-primary-50 rounded-lg">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-primary-700 font-semibold">Asset Settlement:</span>
+                                    <span class="text-2xl font-bold text-primary">$450K</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative lg:order-1">
+                            <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?q=80&w=2940&auto=format&fit=crop"
+                                alt="Family mediation" class="w-full h-64 object-cover rounded-lg shadow-custom"
+                                onerror="this.src='https://images.pixabay.com/photo/2016/11/29/06/15/adult-1867743_1280.jpg'; this.onerror=null;" />
+                            <div class="absolute top-4 right-4 bg-white rounded-full p-2">
+                                <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,14H13V16H11V14M11,10H13V12H11V10Z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 3: Business Law -->
+                <div class="case-study" data-practice="business-law" data-settlement="500k-1m"
+                    data-resolution="trial-verdict">
+                    <div class="grid lg:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <div class="flex items-center mb-4">
+                                <span
+                                    class="bg-accent-100 text-accent-700 px-3 py-1 rounded-full text-sm font-semibold mr-3">Business
+                                    Law</span>
+                                <span class="text-secondary-500 text-sm">Resolved: November 2023</span>
+                            </div>
+                            <h3 class="font-playfair text-2xl font-bold text-primary mb-4">
+                                Tech Startup Wins $850K in Contract Dispute
+                            </h3>
+                            <div class="space-y-4 text-secondary-700">
+                                <p><strong>The Challenge:</strong> Emerging tech company faced breach of contract
+                                    lawsuit from former partner threatening company's future and investor relationships.
+                                </p>
+                                <p><strong>Our Approach:</strong> Thorough contract analysis revealed partner's
+                                    violations. Built strong case with financial experts and industry witnesses.</p>
+                                <p><strong>The Outcome:</strong> Jury verdict awarded $850K in damages plus attorney
+                                    fees, validating client's position and securing business future.</p>
+                            </div>
+                            <div class="mt-6 p-4 bg-accent-50 rounded-lg">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-accent-700 font-semibold">Jury Award:</span>
+                                    <span class="text-2xl font-bold text-accent">$850K</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2940&auto=format&fit=crop"
+                                alt="Business meeting" class="w-full h-64 object-cover rounded-lg shadow-custom"
+                                onerror="this.src='https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                            <div class="absolute top-4 right-4 bg-white rounded-full p-2">
+                                <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button onclick="loadMoreCases()" class="btn-secondary">Load More Case Studies</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonial Videos -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-3xl lg:text-4xl font-bold text-primary mb-4">Müvekkil Başarı Hikayeleri
+                </h2>
+                <p class="text-xl text-secondary-600 max-w-3xl mx-auto">
+                    Hukuki savunmamızla hayatları değişen müvekkillerimizden doğrudan dinleyin
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Video Testimonial 1 -->
+                <div class="relative group cursor-pointer" onclick="playTestimonial(1)">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2940&auto=format&fit=crop"
+                            alt="Maria Santos testimonial"
+                            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                            onerror="this.src='https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-4 left-4 bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            $2.3M Settlement
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="font-semibold text-primary">Maria Santos</h4>
+                        <p class="text-sm text-secondary-600 mb-2">Construction Accident Victim</p>
+                        <p class="text-secondary-700">"DH HUKUK BÜROSU didn't just win my case - they gave me hope for
+                            the future and ensured my family's security."</p>
+                    </div>
+                </div>
+
+                <!-- Video Testimonial 2 -->
+                <div class="relative group cursor-pointer" onclick="playTestimonial(2)">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop"
+                            alt="David Thompson testimonial"
+                            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                            onerror="this.src='https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-4 left-4 bg-accent text-primary px-3 py-1 rounded-full text-sm font-semibold">
+                            $850K Victory
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="font-semibold text-primary">David Thompson</h4>
+                        <p class="text-sm text-secondary-600 mb-2">Tech Startup CEO</p>
+                        <p class="text-secondary-700">"They saved my company and fought for what was right.
+                            Professional, strategic, and absolutely relentless."</p>
+                    </div>
+                </div>
+
+                <!-- Video Testimonial 3 -->
+                <div class="relative group cursor-pointer" onclick="playTestimonial(3)">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2940&auto=format&fit=crop"
+                            alt="Lisa Chen testimonial"
+                            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                            onerror="this.src='https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            $450K Settlement
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="font-semibold text-primary">Lisa Chen</h4>
+                        <p class="text-sm text-secondary-600 mb-2">Divorced Mother of Two</p>
+                        <p class="text-secondary-700">"Compassionate guidance through the most difficult time of my
+                            life. They protected my children's future."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Visualization -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-3xl lg:text-4xl font-bold text-primary mb-4">Başarı Mirasımız</h2>
+                <p class="text-xl text-secondary-600 max-w-3xl mx-auto">
+                    Başarı geçmişimizi tanımlayan dönüm noktası davalar ve emsal niteliğindeki zaferler
+                </p>
+            </div>
+
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-accent-200"></div>
+
+                <!-- Timeline Items -->
+                <div class="space-y-12">
+                    <!-- 2024 -->
+                    <div class="relative flex items-center">
+                        <div class="flex-1 text-right pr-8">
+                            <div class="bg-white p-6 rounded-lg shadow-custom border-l-4 border-success">
+                                <h4 class="font-playfair text-lg font-bold text-primary mb-2">2024 Milestone</h4>
+                                <p class="text-secondary-700 mb-2">Achieved record-breaking $2.3M personal injury
+                                    settlement</p>
+                                <span class="text-sm text-success font-semibold">$15.2M recovered this year</span>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-success rounded-full border-4 border-white shadow-custom">
+                        </div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+
+                    <!-- 2023 -->
+                    <div class="relative flex items-center">
+                        <div class="flex-1 pr-8"></div>
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-white shadow-custom">
+                        </div>
+                        <div class="flex-1 pl-8">
+                            <div class="bg-white p-6 rounded-lg shadow-custom border-r-4 border-accent">
+                                <h4 class="font-playfair text-lg font-bold text-primary mb-2">2023 Achievement</h4>
+                                <p class="text-secondary-700 mb-2">Won precedent-setting business litigation case</p>
+                                <span class="text-sm text-accent font-semibold">$12.8M total recoveries</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2022 -->
+                    <div class="relative flex items-center">
+                        <div class="flex-1 text-right pr-8">
+                            <div class="bg-white p-6 rounded-lg shadow-custom border-l-4 border-primary">
+                                <h4 class="font-playfair text-lg font-bold text-primary mb-2">2022 Recognition</h4>
+                                <p class="text-secondary-700 mb-2">Named "Law Firm of the Year" by State Bar Association
+                                </p>
+                                <span class="text-sm text-primary font-semibold">95% case success rate</span>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow-custom">
+                        </div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+
+                    <!-- 2021 -->
+                    <div class="relative flex items-center">
+                        <div class="flex-1 pr-8"></div>
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-warning rounded-full border-4 border-white shadow-custom">
+                        </div>
+                        <div class="flex-1 pl-8">
+                            <div class="bg-white p-6 rounded-lg shadow-custom border-r-4 border-warning">
+                                <h4 class="font-playfair text-lg font-bold text-primary mb-2">2021 Expansion</h4>
+                                <p class="text-secondary-700 mb-2">Opened second office, doubled attorney team</p>
+                                <span class="text-sm text-warning font-semibold">500+ cases handled</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Could This Be Your Case Tool -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl p-8 shadow-custom-xl">
+                <div class="text-center mb-8">
+                    <h2 class="font-playfair text-3xl lg:text-4xl font-bold text-primary mb-4">Bu Sizin Davanız Olabilir
+                        mi?
+                    </h2>
+                    <p class="text-xl text-secondary-600 max-w-3xl mx-auto">
+                        Benzer davaları bulun ve durumunuz için olası sonuçları anlayın
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Case Matching Form -->
+                    <div>
+                        <h3 class="font-playfair text-xl font-bold text-primary mb-6">Describe Your Situation</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-secondary-700 mb-2">Legal Issue
+                                    Type</label>
+                                <select class="input-field">
+                                    <option>Select your legal issue</option>
+                                    <option>Personal Injury</option>
+                                    <option>Family Law</option>
+                                    <option>Business Dispute</option>
+                                    <option>Estate Planning</option>
+                                    <option>Criminal Defense</option>
+                                    <option>Real Estate</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-secondary-700 mb-2">Estimated
+                                    Damages/Value</label>
+                                <select class="input-field">
+                                    <option>Select range</option>
+                                    <option>Under $50K</option>
+                                    <option>$50K - $100K</option>
+                                    <option>$100K - $500K</option>
+                                    <option>$500K - $1M</option>
+                                    <option>Over $1M</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-secondary-700 mb-2">Brief
+                                    Description</label>
+                                <textarea class="input-field h-24"
+                                    placeholder="Briefly describe your situation..."></textarea>
+                            </div>
+                            <button type="button" onclick="findSimilarCases()" class="btn-primary w-full">
+                                Find Similar Cases
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Potential Outcomes -->
+                    <div id="outcomeResults" class="hidden">
+                        <h3 class="font-playfair text-xl font-bold text-primary mb-6">Potential Outcomes</h3>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-success-50 rounded-lg border border-success-200">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="font-semibold text-success-700">Similar Cases Found:</span>
+                                    <span class="text-success-600">12 matches</span>
+                                </div>
+                                <p class="text-sm text-success-600">Based on cases with similar circumstances and
+                                    damages</p>
+                            </div>
+                            <div class="p-4 bg-accent-50 rounded-lg border border-accent-200">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="font-semibold text-accent-700">Average Settlement:</span>
+                                    <span class="text-accent-600">$485K</span>
+                                </div>
+                                <p class="text-sm text-accent-600">Range: $250K - $850K</p>
+                            </div>
+                            <div class="p-4 bg-primary-50 rounded-lg border border-primary-200">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="font-semibold text-primary-700">Success Rate:</span>
+                                    <span class="text-primary-600">92%</span>
+                                </div>
+                                <p class="text-sm text-primary-600">For similar case types</p>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <a href="consultation_booking.html" class="btn-accent w-full text-center">
+                                Schedule Free Consultation
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Default Content -->
+                    <div id="defaultContent" class="flex items-center justify-center">
+                        <div class="text-center">
+                            <svg class="w-24 h-24 text-secondary-300 mx-auto mb-4" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
+                            <p class="text-secondary-500">Complete the form to see potential outcomes for your case</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <svg class="h-8 w-8 text-accent mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z" />
+                            <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" fill="none" />
+                        </svg>
+                        <span class="font-playfair text-xl font-bold">DH HUKUK BÜROSU</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Karmaşık hukuki konularda netlik, şeffaflık ve olağanüstü sonuçlar sunan güvenilir hukuk
+                        ortağınız.
+                    </p>
+                    <div class="space-y-2">
+                        <p class="text-gray-300">📞 Acil: +90 (212) 123-4567</p>
+                        <p class="text-gray-300">📧 info@hancer.av.tr</p>
+                        <p class="text-gray-300">📍 İstanbul, Türkiye</p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-playfair text-lg font-bold mb-6">Hızlı Bağlantılar</h4>
+                    <ul class="space-y-3">
+                        <li><a href="homepage.html" class="text-gray-300 hover:text-accent transition-custom">Ana
+                                Sayfa</a>
+                        </li>
+                        <li><a href="case_results.html" class="text-gray-300 hover:text-accent transition-custom">Dava
+                                Sonuçları</a></li>
+                        <li><a href="legal_resource_center.html"
+                                class="text-gray-300 hover:text-accent transition-custom">Hukuki Kaynaklar</a></li>
+                        <li><a href="consultation_booking.html"
+                                class="text-gray-300 hover:text-accent transition-custom">Randevu Al</a></li>
+                        <li><a href="client_portal.html"
+                                class="text-gray-300 hover:text-accent transition-custom">Müvekkil Portalı</a></li>
+
+                    </ul>
+                </div>
+
+                <!-- Practice Areas -->
+                <div>
+                    <h4 class="font-playfair text-lg font-bold mb-6">Practice Areas</h4>
+                    <ul class="space-y-3">
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-300 hover:text-accent transition-custom">Personal Injury</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-300 hover:text-accent transition-custom">Family Law</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-300 hover:text-accent transition-custom">Business Law</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-300 hover:text-accent transition-custom">Estate Planning</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-300 hover:text-accent transition-custom">Criminal Defense</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8">
+                <div class="mb-6 p-4 bg-gray-800 rounded-lg">
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        <strong>www.hancer.av.tr</strong> Herhangi bir şekilde hukuki görüş veya dayanak olarak
+                        kullanılmamalıdır. İçerikler güncelliğini yitirebilir ve yürürlükte olan mevzuat veya hukuki
+                        uygulamaların son halini yansıtmayabilir. Bu nedenle DH HUKUK BÜROSU bu sitede yer alan
+                        bilgilerdeki herhangi bir yanlışlık veya eksiklikten veya bu bilgilerin kullanımından doğan
+                        sonuçlardan sorumlu tutulamaz, ziyaretçiler sunulan içeriklerin doğru olmadığını veya bu
+                        içerikler nedeniyle zarar gördüklerini iddia edemezler. Bu sitedeki tüm bilgi ve dosyaların
+                        mülkiyeti DH HUKUK BÜROSU'na ait olup, yazılı iznimiz olmadan kopyalanamaz, çoğaltılamaz ve
+                        kullanılmaz. DH HUKUK BÜROSU tarafından açıkça yazılı şekilde izin verilmediği sürece, bu sitede
+                        yeni linkler açılması ve/veya bu siteye link yaratılması kesinlikle yasaktır.
+                    </p>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400">© 2025 DH HUKUK BÜROSU. Tüm Hakları Saklıdır.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-accent transition-custom">Gizlilik
+                            Politikası</a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-accent transition-custom">Hizmet
+                            Şartları</a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-accent transition-custom">Etik</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Consultation Button (Mobile) -->
+    <div class="fixed bottom-4 right-4 md:hidden z-50">
+        <a href="consultation_booking.html" class="btn-accent shadow-custom-lg">
+            📞 Free Consultation
+        </a>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function changeLanguage(lang) {
+            // Dil değiştirme fonksiyonu
+            const currentPage = window.location.pathname.split('/').pop();
+            let targetPage = '';
+
+            switch (lang) {
+                case 'tr':
+                    targetPage = currentPage;
+                    break;
+                case 'en':
+                    targetPage = currentPage.replace('.html', '_en.html');
+                    break;
+                case 'de':
+                    targetPage = currentPage.replace('.html', '_de.html');
+                    break;
+                case 'ru':
+                    targetPage = currentPage.replace('.html', '_ru.html');
+                    break;
+                default:
+                    targetPage = currentPage;
+            }
+
+            // Dil tercihini localStorage'a kaydet
+            localStorage.setItem('preferred-language', lang);
+
+            // Sayfa yönlendirmesi (şimdilik alert göster)
+            alert(`Dil değiştirildi: ${lang.toUpperCase()}\n\nBu özellik geliştirilme aşamasındadır. Çok dilli sayfalar yakında eklenecektir.`);
+
+            // Gerçek uygulamada şu şekilde yönlendirme yapılabilir:
+            // window.location.href = targetPage;
+        }
+
+        // Sayfa yüklendiğinde kaydedilen dil tercihini yükle
+        document.addEventListener('DOMContentLoaded', function () {
+            const savedLanguage = localStorage.getItem('preferred-language');
+            if (savedLanguage) {
+                const desktopSelector = document.getElementById('language-selector');
+                const mobileSelector = document.getElementById('mobile-language-selector');
+
+                if (desktopSelector) desktopSelector.value = savedLanguage;
+                if (mobileSelector) mobileSelector.value = savedLanguage;
+            }
+        });
+
+        function filterCases() {
+            const practiceArea = document.getElementById('practiceAreaFilter').value;
+            const settlement = document.getElementById('settlementFilter').value;
+            const resolution = document.getElementById('resolutionFilter').value;
+
+            const caseStudies = document.querySelectorAll('.case-study');
+
+            caseStudies.forEach(study => {
+                const matchesPractice = !practiceArea || study.dataset.practice === practiceArea;
+                const matchesSettlement = !settlement || study.dataset.settlement === settlement;
+                const matchesResolution = !resolution || study.dataset.resolution === resolution;
+
+                if (matchesPractice && matchesSettlement && matchesResolution) {
+                    study.style.display = 'block';
+                } else {
+                    study.style.display = 'none';
+                }
+            });
+        }
+
+        function resetFilters() {
+            document.getElementById('practiceAreaFilter').value = '';
+            document.getElementById('settlementFilter').value = '';
+            document.getElementById('resolutionFilter').value = '';
+
+            const caseStudies = document.querySelectorAll('.case-study');
+            caseStudies.forEach(study => {
+                study.style.display = 'block';
+            });
+        }
+
+        function loadMoreCases() {
+            alert('Daha fazla dava yükleniyor... Gerçek uygulamada, bu işlem AJAX ile ek dava çalışmaları yükleyecektir.');
+        }
+
+        function playTestimonial(id) {
+            alert(`${id} numaralı müvekkil videosu oynatılıyor. Gerçek uygulamada, bu bir video modalı açacak veya video oynatıcıya yönlendirecektir.`);
+        }
+
+        function findSimilarCases() {
+            document.getElementById('defaultContent').classList.add('hidden');
+            document.getElementById('outcomeResults').classList.remove('hidden');
+        }
+    </script>
+    <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+
+</html>

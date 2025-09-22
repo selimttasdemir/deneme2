@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Portal - DH HUKUK BÜROSU</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+    <meta name="description"
+        content="Secure client portal for DH HUKUK BÜROSU clients. Access case updates, documents, billing, and communicate with your legal team." />
+    <script type="module"
+        src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Flegaledge5801back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="bg-surface">
+    <!-- Navigation Header -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="homepage.html">DH HUKUK BÜROSU</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="homepage.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="case_results.html">Dava Sonuçları</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="legal_resource_center.html">Hukuki Kaynaklar</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Diğer Sayfalar
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about_values.html">Hakkımızda</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="consultation_booking.html">Danışmanlık Al</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <select class="form-select me-2" onchange="changeLanguage(this.value)">
+                        <option value="tr" selected>🇹🇷 Türkçe</option>
+                        <option value="en">🇺🇸 English</option>
+                        <option value="de">🇩🇪 Deutsch</option>
+                        <option value="ru">🇷🇺 Русский</option>
+                    </select>
+                    <a href="consultation_booking.html" class="btn btn-outline-primary">Ücretsiz Danışmanlık</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Right Side Elements -->
+    <div class="hidden lg:flex items-center space-x-3">
+        <!-- Language Selector -->
+        <div class="relative">
+            <select id="language-selector"
+                class="bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500 min-w-[120px]"
+                onchange="changeLanguage(this.value)">
+                <option value="tr" selected>🇹🇷 Türkçe</option>
+                <option value="en">🇺🇸 English</option>
+                <option value="de">🇩🇪 Deutsch</option>
+                <option value="ru">🇷🇺 Русский</option>
+            </select>
+        </div>
+
+        <!-- User Profile & Logout -->
+        <div class="flex items-center space-x-2">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150&auto=format&fit=crop"
+                alt="John Doe" class="w-8 h-8 rounded-full object-cover"
+                onerror="this.src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150'; this.onerror=null;" />
+            <span class="text-sm font-semibold text-secondary-700">John Doe</span>
+        </div>
+        <button onclick="logout()" class="text-secondary-600 hover:text-primary transition-custom">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile menu button -->
+    <div class="md:hidden">
+        <button type="button" class="text-secondary-600 hover:text-primary" onclick="toggleMobileMenu()">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="md:hidden hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+            <a href="homepage.html" class="text-secondary-600 hover:text-primary block px-3 py-2">Home</a>
+            <a href="case_results.html" class="text-secondary-600 hover:text-primary block px-3 py-2">Case Results</a>
+            <a href="legal_resource_center.html" class="text-secondary-600 hover:text-primary block px-3 py-2">Legal
+                Resources</a>
+            <a href="about_values.html" class="text-secondary-600 hover:text-primary block px-3 py-2">About</a>
+            <a href="client_portal.html" class="text-primary font-semibold block px-3 py-2">Client Portal</a>
+
+            <!-- Mobile Language Selector -->
+            <div class="px-3 py-2">
+                <label class="block text-sm font-medium text-gray-700 mb-2">Dil / Language</label>
+                <select id="mobile-language-selector"
+                    class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500"
+                    onchange="changeLanguage(this.value)">
+                    <option value="tr" selected>🇹🇷 Türkçe</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="de">🇩🇪 Deutsch</option>
+                    <option value="ru">🇷🇺 Русский</option>
+                </select>
+            </div>
+
+            <div class="flex items-center justify-between px-3 py-2 border-t border-gray-200 mt-2">
+                <span class="text-sm text-secondary-600">John Doe</span>
+                <button onclick="logout()" class="text-secondary-600 hover:text-primary">Logout</button>
+            </div>
+        </div>
+    </div>
+    </nav>
+    </header>
+
+    <!-- Portal Dashboard -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Welcome Section -->
+        <div class="mb-8">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div>
+                    <h1 class="font-playfair text-3xl lg:text-4xl font-bold text-primary mb-2">Welcome back, John</h1>
+                    <p class="text-xl text-secondary-600">Here's an overview of your case progress and important
+                        updates.</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <div class="bg-success-50 text-success px-4 py-2 rounded-lg text-sm font-semibold">
+                        Case Status: Active
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="grid md:grid-cols-4 gap-6 mb-8">
+            <div class="card text-center">
+                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <div class="text-2xl font-bold text-primary mb-1">73%</div>
+                <p class="text-sm text-secondary-600">Case Progress</p>
+            </div>
+
+            <div class="card text-center">
+                <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                </div>
+                <div class="text-2xl font-bold text-primary mb-1">12</div>
+                <p class="text-sm text-secondary-600">Documents</p>
+            </div>
+
+            <div class="card text-center">
+                <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                </div>
+                <div class="text-2xl font-bold text-primary mb-1">3</div>
+                <p class="text-sm text-secondary-600">New Messages</p>
+            </div>
+
+            <div class="card text-center">
+                <div class="w-12 h-12 bg-warning-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-6 h-6 text-warning" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 0V6a2 2 0 012-2h4a2 2 0 012 2v1m-6 0h8m-8 0v10a2 2 0 002 2h4a2 2 0 002-2V7m-8 0H6a2 2 0 00-2 2v10a2 2 0 002 2h1m0 0h10" />
+                    </svg>
+                </div>
+                <div class="text-2xl font-bold text-primary mb-1">2</div>
+                <p class="text-sm text-secondary-600">Pending Tasks</p>
+            </div>
+        </div>
+
+        <!-- Main Dashboard Grid -->
+        <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Left Column -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Case Status Overview -->
+                <section class="card">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="font-playfair text-2xl font-bold text-primary">Case Status Overview</h2>
+                        <span class="text-sm text-secondary-500">Personal Injury Case #PI-2024-1847</span>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Progress Bar -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm font-semibold text-secondary-700">Overall Progress</span>
+                                <span class="text-sm text-secondary-600">73% Complete</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="bg-success h-3 rounded-full" style="width: 73%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Current Phase -->
+                        <div class="bg-primary-50 rounded-lg p-4">
+                            <h3 class="font-semibold text-primary mb-2">Current Phase: Settlement Negotiations</h3>
+                            <p class="text-secondary-600 mb-4">We are currently in active negotiations with the
+                                insurance company. Initial offer received and counter-proposal submitted.</p>
+
+                            <div class="flex items-center text-sm text-secondary-600">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 0V6a2 2 0 012-2h4a2 2 0 012 2v1m-6 0h8m-8 0v10a2 2 0 002 2h4a2 2 0 002-2V7m-8 0H6a2 2 0 00-2 2v10a2 2 0 002 2h1m0 0h10" />
+                                </svg>
+                                <span>Next Step: Await response by January 15, 2025</span>
+                            </div>
+                        </div>
+
+                        <!-- Recent Activity -->
+                        <div>
+                            <h3 class="font-semibold text-primary mb-4">Recent Activity</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-success rounded-full mt-2"></div>
+                                    <div>
+                                        <p class="text-sm text-secondary-700">Counter-proposal submitted to insurance
+                                            company</p>
+                                        <p class="text-xs text-secondary-500">January 8, 2025 - 2:30 PM</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-accent rounded-full mt-2"></div>
+                                    <div>
+                                        <p class="text-sm text-secondary-700">Medical records review completed</p>
+                                        <p class="text-xs text-secondary-500">January 5, 2025 - 10:15 AM</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                                    <div>
+                                        <p class="text-sm text-secondary-700">Initial settlement offer received
+                                            ($45,000)</p>
+                                        <p class="text-xs text-secondary-500">January 3, 2025 - 4:45 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Document Management -->
+                <section class="card">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="font-playfair text-2xl font-bold text-primary">Document Center</h2>
+                        <button onclick="uploadDocument()" class="btn-accent text-sm">Upload Document</button>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Document Item -->
+                        <div
+                            class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-custom">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 bg-error-100 rounded-lg flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-error" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-secondary-700">Medical Records - Dr. Johnson</h4>
+                                    <p class="text-sm text-secondary-500">Uploaded Jan 5, 2025 • 2.4 MB</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-xs bg-success-100 text-success px-2 py-1 rounded">Attorney
+                                    Reviewed</span>
+                                <button class="text-accent hover:text-accent-700 transition-custom">
+                                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Document Item -->
+                        <div
+                            class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-custom">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-secondary-700">Insurance Correspondence</h4>
+                                    <p class="text-sm text-secondary-500">Uploaded Jan 3, 2025 • 1.8 MB</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-xs bg-accent-100 text-accent px-2 py-1 rounded">New</span>
+                                <button class="text-accent hover:text-accent-700 transition-custom">
+                                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Document Item -->
+                        <div
+                            class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-custom">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 bg-warning-100 rounded-lg flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-secondary-700">Accident Report - Police</h4>
+                                    <p class="text-sm text-secondary-500">Uploaded Dec 28, 2024 • 3.1 MB</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-xs bg-success-100 text-success px-2 py-1 rounded">Processed</span>
+                                <button class="text-accent hover:text-accent-700 transition-custom">
+                                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 text-center">
+                        <button class="text-accent hover:text-accent-700 transition-custom font-semibold">
+                            View All Documents (12) →
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Communication Center -->
+                <section class="card">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="font-playfair text-2xl font-bold text-primary">Communication Center</h2>
+                        <button onclick="composeMessage()" class="btn-primary text-sm">New Message</button>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Message Thread -->
+                        <div class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-custom">
+                            <div class="flex items-start justify-between mb-3">
+                                <div class="flex items-center space-x-3">
+                                    <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?q=80&w=150&auto=format&fit=crop"
+                                        alt="Sarah Mitchell" class="w-10 h-10 rounded-full object-cover"
+                                        onerror="this.src='https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=150'; this.onerror=null;" />
+                                    <div>
+                                        <h4 class="font-semibold text-secondary-700">Sarah Mitchell</h4>
+                                        <p class="text-sm text-secondary-500">Senior Partner</p>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-sm text-secondary-500">Jan 8, 2025</p>
+                                    <span class="text-xs bg-success-100 text-success px-2 py-1 rounded">Unread</span>
+                                </div>
+                            </div>
+                            <p class="text-secondary-700 mb-3">Hi John, I wanted to update you on the latest
+                                developments in your case. We've submitted our counter-proposal and are awaiting their
+                                response...</p>
+                            <button class="text-accent hover:text-accent-700 transition-custom text-sm font-semibold">
+                                Read Full Message →
+                            </button>
+                        </div>
+
+                        <!-- Message Thread -->
+                        <div class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-custom">
+                            <div class="flex items-start justify-between mb-3">
+                                <div class="flex items-center space-x-3">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop"
+                                        alt="Legal Assistant" class="w-10 h-10 rounded-full object-cover"
+                                        onerror="this.src='https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg'; this.onerror=null;" />
+                                    <div>
+                                        <h4 class="font-semibold text-secondary-700">Michael Chen</h4>
+                                        <p class="text-sm text-secondary-500">Legal Assistant</p>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-sm text-secondary-500">Jan 6, 2025</p>
+                                    <span class="text-xs bg-gray-100 text-secondary-600 px-2 py-1 rounded">Read</span>
+                                </div>
+                            </div>
+                            <p class="text-secondary-700 mb-3">Thank you for providing the additional medical
+                                documentation. We've forwarded everything to Sarah for review...</p>
+                            <button class="text-accent hover:text-accent-700 transition-custom text-sm font-semibold">
+                                View Conversation →
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 text-center">
+                        <button class="text-accent hover:text-accent-700 transition-custom font-semibold">
+                            View All Messages →
+                        </button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-8">
+                <!-- Upcoming Events -->
+                <section class="card">
+                    <h2 class="font-playfair text-xl font-bold text-primary mb-6">Upcoming Events</h2>
+
+                    <div class="space-y-4">
+                        <!-- Event Item -->
+                        <div class="flex items-start space-x-4 p-3 bg-primary-50 rounded-lg">
+                            <div
+                                class="w-12 h-12 bg-primary text-white rounded-lg flex flex-col items-center justify-center text-xs font-semibold">
+                                <span>JAN</span>
+                                <span>15</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-secondary-700">Settlement Response Deadline</h4>
+                                <p class="text-sm text-secondary-600">Insurance company response expected</p>
+                                <p class="text-xs text-secondary-500">2:00 PM - High Priority</p>
+                            </div>
+                        </div>
+
+                        <!-- Event Item -->
+                        <div class="flex items-start space-x-4 p-3 bg-accent-50 rounded-lg">
+                            <div
+                                class="w-12 h-12 bg-accent text-primary rounded-lg flex flex-col items-center justify-center text-xs font-semibold">
+                                <span>JAN</span>
+                                <span>22</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-secondary-700">Client Check-in Call</h4>
+                                <p class="text-sm text-secondary-600">Scheduled call with Sarah Mitchell</p>
+                                <p class="text-xs text-secondary-500">10:00 AM - 30 minutes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6">
+                        <button class="text-accent hover:text-accent-700 transition-custom font-semibold text-sm">
+                            View Full Calendar →
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Billing Summary -->
+                <section class="card">
+                    <h2 class="font-playfair text-xl font-bold text-primary mb-6">Billing Summary</h2>
+
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-secondary-600">Current Balance</span>
+                            <span class="text-2xl font-bold text-primary">$2,450.00</span>
+                        </div>
+
+                        <div class="border-t border-gray-200 pt-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm text-secondary-600">Last Payment</span>
+                                <span class="text-sm font-semibold text-secondary-700">$1,500.00</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-secondary-600">Payment Date</span>
+                                <span class="text-sm text-secondary-600">Dec 28, 2024</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-warning-50 rounded-lg p-4">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-5 h-5 text-warning mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                </svg>
+                                <span class="text-sm font-semibold text-warning">Payment Due</span>
+                            </div>
+                            <p class="text-sm text-secondary-600">Next payment of $1,225.00 due January 15, 2025</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 space-y-2">
+                        <button onclick="makePayment()" class="btn-primary w-full text-sm">Make Payment</button>
+                        <button
+                            class="text-accent hover:text-accent-700 transition-custom font-semibold text-sm w-full">
+                            View Detailed Invoice →
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Your Legal Team -->
+                <section class="card">
+                    <h2 class="font-playfair text-xl font-bold text-primary mb-6">Your Legal Team</h2>
+
+                    <div class="space-y-4">
+                        <!-- Team Member -->
+                        <div class="flex items-center space-x-3">
+                            <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?q=80&w=150&auto=format&fit=crop"
+                                alt="Sarah Mitchell" class="w-12 h-12 rounded-full object-cover"
+                                onerror="this.src='https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=150'; this.onerror=null;" />
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-secondary-700">Sarah Mitchell</h4>
+                                <p class="text-sm text-secondary-600">Lead Attorney</p>
+                                <p class="text-xs text-secondary-500">sarah.mitchell@legaledgepro.com</p>
+                            </div>
+                            <button onclick="contactAttorney('sarah')"
+                                class="text-accent hover:text-accent-700 transition-custom">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Team Member -->
+                        <div class="flex items-center space-x-3">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop"
+                                alt="Michael Chen" class="w-12 h-12 rounded-full object-cover"
+                                onerror="this.src='https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg'; this.onerror=null;" />
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-secondary-700">Michael Chen</h4>
+                                <p class="text-sm text-secondary-600">Legal Assistant</p>
+                                <p class="text-xs text-secondary-500">michael.chen@legaledgepro.com</p>
+                            </div>
+                            <button onclick="contactAttorney('michael')"
+                                class="text-accent hover:text-accent-700 transition-custom">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mt-6">
+                        <div class="bg-success-50 rounded-lg p-4">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-5 h-5 text-success mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="text-sm font-semibold text-success">24/7 Emergency Support</span>
+                            </div>
+                            <p class="text-sm text-secondary-600">Call (555) 123-LEGAL for urgent matters</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Pending Tasks -->
+                <section class="card">
+                    <h2 class="font-playfair text-xl font-bold text-primary mb-6">Your Tasks</h2>
+
+                    <div class="space-y-3">
+                        <!-- Task Item -->
+                        <div class="flex items-start space-x-3 p-3 border border-warning-200 bg-warning-50 rounded-lg">
+                            <input type="checkbox" class="mt-1 text-accent focus:ring-accent border-gray-300 rounded" />
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-secondary-700">Review Settlement Proposal</h4>
+                                <p class="text-sm text-secondary-600">Review and provide feedback on the latest
+                                    settlement terms</p>
+                                <p class="text-xs text-warning font-semibold">Due: January 12, 2025</p>
+                            </div>
+                        </div>
+
+                        <!-- Task Item -->
+                        <div class="flex items-start space-x-3 p-3 border border-gray-200 rounded-lg">
+                            <input type="checkbox" class="mt-1 text-accent focus:ring-accent border-gray-300 rounded" />
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-secondary-700">Complete Medical Authorization</h4>
+                                <p class="text-sm text-secondary-600">Sign and return medical record authorization forms
+                                </p>
+                                <p class="text-xs text-secondary-500">Due: January 20, 2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6">
+                        <button class="text-accent hover:text-accent-700 transition-custom font-semibold text-sm">
+                            View All Tasks →
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-900 text-white py-16 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <svg class="h-8 w-8 text-accent mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z" />
+                            <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" fill="none" />
+                        </svg>
+                        <span class="font-playfair text-xl font-bold">DH HUKUK BÜROSU</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Your trusted legal partner providing clarity, transparency, and exceptional results in complex
+                        legal matters.
+                    </p>
+                    <div class="space-y-2">
+                        <p class="text-gray-300">📞 Acil: +90 (212) 123-4567</p>
+                        <p class="text-gray-300">📧 info@hancer.av.tr</p>
+                        <p class="text-gray-300">📍 İstanbul, Türkiye</p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-playfair text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="homepage.html" class="text-gray-300 hover:text-accent transition-custom">Home</a>
+                        </li>
+                        <li><a href="case_results.html" class="text-gray-300 hover:text-accent transition-custom">Case
+                                Results</a></li>
+                        <li><a href="legal_resource_center.html"
+                                class="text-gray-300 hover:text-accent transition-custom">Legal Resources</a></li>
+                        <li><a href="consultation_booking.html"
+                                class="text-gray-300 hover:text-accent transition-custom">Book Consultation</a></li>
+                        <li><a href="client_portal.html"
+                                class="text-gray-300 hover:text-accent transition-custom">Client Portal</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="font-playfair text-lg font-bold mb-6">Client Support</h4>
+                    <ul class="space-y-3">
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-custom">Help
+                                Center</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-300 hover:text-accent transition-custom">Document Upload</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-300 hover:text-accent transition-custom">Payment Portal</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-300 hover:text-accent transition-custom">Emergency Contact</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-300 hover:text-accent transition-custom">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8">
+                <div class="mb-6 p-4 bg-gray-800 rounded-lg">
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        <strong>www.hancer.av.tr</strong> Herhangi bir şekilde hukuki görüş veya dayanak olarak
+                        kullanılmamalıdır. İçerikler güncelliğini yitirebilir ve yürürlükte olan mevzuat veya hukuki
+                        uygulamaların son halini yansıtmayabilir. Bu nedenle DH HUKUK BÜROSU bu sitede yer alan
+                        bilgilerdeki herhangi bir yanlışlık veya eksiklikten veya bu bilgilerin kullanımından doğan
+                        sonuçlardan sorumlu tutulamaz, ziyaretçiler sunulan içeriklerin doğru olmadığını veya bu
+                        içerikler nedeniyle zarar gördüklerini iddia edemezler. Bu sitedeki tüm bilgi ve dosyaların
+                        mülkiyeti DH HUKUK BÜROSU'na ait olup, yazılı iznimiz olmadan kopyalanamaz, çoğaltılamaz ve
+                        kullanılmaz. DH HUKUK BÜROSU tarafından açıkça yazılı şekilde izin verilmediği sürece, bu sitede
+                        yeni linkler açılması ve/veya bu siteye link yaratılması kesinlikle yasaktır.
+                    </p>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400">© 2025 DH HUKUK BÜROSU. Tüm Hakları Saklıdır.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-accent transition-custom">Gizlilik
+                            Politikası</a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-accent transition-custom">Hizmet
+                            Şartları</a>
+                        <a href="javascript:void(0)"
+                            class="text-gray-400 hover:text-accent transition-custom">Güvenlik</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Quick Actions -->
+    <div class="fixed bottom-4 right-4 md:hidden z-50 space-y-2">
+        <button onclick="composeMessage()" class="btn-accent shadow-custom-lg">
+            💬 Message
+        </button>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function logout() {
+            if (confirm('Are you sure you want to logout?')) {
+                alert('Logging out... In a real application, this would clear the session and redirect to login page.');
+                window.location.href = 'homepage.html';
+            }
+        }
+
+        function changeLanguage(lang) {
+            // Dil değiştirme fonksiyonu
+            const currentPage = window.location.pathname.split('/').pop();
+            let targetPage = '';
+
+            switch (lang) {
+                case 'tr':
+                    targetPage = currentPage;
+                    break;
+                case 'en':
+                    targetPage = currentPage.replace('.html', '_en.html');
+                    break;
+                case 'de':
+                    targetPage = currentPage.replace('.html', '_de.html');
+                    break;
+                case 'ru':
+                    targetPage = currentPage.replace('.html', '_ru.html');
+                    break;
+                default:
+                    targetPage = currentPage;
+            }
+
+            // Dil tercihini localStorage'a kaydet
+            localStorage.setItem('preferred-language', lang);
+
+            // Sayfa yönlendirmesi (şimdilik alert göster)
+            alert(`Dil değiştirildi: ${lang.toUpperCase()}\n\nBu özellik geliştirilme aşamasındadır. Çok dilli sayfalar yakında eklenecektir.`);
+
+            // Gerçek uygulamada şu şekilde yönlendirme yapılabilir:
+            // window.location.href = targetPage;
+        }
+
+        // Sayfa yüklendiğinde kaydedilen dil tercihini yükle
+        document.addEventListener('DOMContentLoaded', function () {
+            const savedLanguage = localStorage.getItem('preferred-language');
+            if (savedLanguage) {
+                const desktopSelector = document.getElementById('language-selector');
+                const mobileSelector = document.getElementById('mobile-language-selector');
+
+                if (desktopSelector) desktopSelector.value = savedLanguage;
+                if (mobileSelector) mobileSelector.value = savedLanguage;
+            }
+        });
+
+        function uploadDocument() {
+            alert('Document upload feature would open a file picker dialog. In a real application, this would allow secure document upload with progress tracking.');
+        }
+
+        function composeMessage() {
+            alert('Compose message feature would open a message composer. In a real application, this would allow direct communication with your legal team.');
+        }
+
+        function makePayment() {
+            alert('Payment portal would open secure payment interface. In a real application, this would integrate with payment processors for secure transactions.');
+        }
+
+        function contactAttorney(attorney) {
+            const attorneys = {
+                'sarah': 'Sarah Mitchell - Lead Attorney',
+                'michael': 'Michael Chen - Legal Assistant'
+            };
+            alert(`Contacting ${attorneys[attorney]}. In a real application, this would open communication options (call, email, message).`);
+        }
+
+        // Simulate real-time updates
+        function simulateRealTimeUpdates() {
+            // This would typically connect to WebSocket or polling for real-time updates
+            console.log('Real-time updates would be handled here for case status, messages, and notifications.');
+        }
+
+        // Initialize portal features
+        document.addEventListener('DOMContentLoaded', function () {
+            simulateRealTimeUpdates();
+        });
+    </script>
+    <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+
+</html>

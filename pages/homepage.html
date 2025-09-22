@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DH HUKUK BÜROSU - Karmaşık Zamanlarda Hukuki Netlik</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+    <meta name="description"
+        content="Şeffaf fiyatlandırma, kanıtlanmış sonuçlar ve 7/24 destek sunan premium hukuki hizmetler platformu. DH HUKUK BÜROSU ile uzman hukuki rehberlik alın." />
+    <script type="module"
+        src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Flegaledge5801back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="homepage.html">DH HUKUK BÜROSU</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="homepage.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="case_results.html">Dava Sonuçları</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="legal_resource_center.html">Hukuki Kaynaklar</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Diğer Sayfalar
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about_values.html">Hakkımızda</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="consultation_booking.html">Danışmanlık Al</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <select class="form-select me-2" onchange="changeLanguage(this.value)">
+                        <option value="tr" selected>🇹🇷 Türkçe</option>
+                        <option value="en">🇺🇸 English</option>
+                        <option value="de">🇩🇪 Deutsch</option>
+                        <option value="ru">🇷🇺 Русский</option>
+                    </select>
+                    <a href="consultation_booking.html" class="btn btn-outline-primary">Ücretsiz Danışmanlık</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+        class="relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2940&auto=format&fit=crop"
+                alt="Professional legal consultation" class="w-full h-full object-cover opacity-30"
+                onerror="this.src='https://images.pexels.com/photos/5668882/pexels-photo-5668882.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="text-center lg:text-left">
+                    <h1 class="font-playfair text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                        <span class="text-accent">Karmaşık zamanlarda</span> hukuki netlik
+                    </h1>
+                    <p class="text-xl lg:text-2xl mb-8 text-gray-200 leading-relaxed">
+                        Avukatınız, eğitmeniniz, müttefikiniz. Kapsamlı hukuki ekosistemimiz aracılığıyla hukuki
+                        zorlukları güvenle aşın.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="consultation_booking.html" class="btn-accent text-lg px-8 py-4">Ücretsiz Danışmanlık
+                            Al</a>
+                        <a href="legal_resource_center.html"
+                            class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-custom">
+                            Kaynakları Keşfet
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Finder Widget -->
+                <div class="bg-white rounded-2xl p-8 shadow-custom-xl">
+                    <h3 class="font-playfair text-2xl font-bold text-primary mb-6">Hukuki Çözümünüzü Bulun</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-secondary-700 mb-2">Hangi hukuki yardıma
+                                ihtiyacınız var?</label>
+                            <select class="input-field">
+                                <option>Hukuki ihtiyacınızı seçin</option>
+                                <option>Kişisel Yaralanma</option>
+                                <option>Aile Hukuku</option>
+                                <option>İş Hukuku</option>
+                                <option>Miras Planlaması</option>
+                                <option>Ceza Savunması</option>
+                                <option>Gayrimenkul</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-secondary-700 mb-2">Aciliyet Seviyesi</label>
+                            <select class="input-field">
+                                <option>Konunuz ne kadar acil?</option>
+                                <option>Acil (24-48 saat)</option>
+                                <option>Acil (Bu hafta)</option>
+                                <option>Standart (2 hafta içinde)</option>
+                                <option>İleriye dönük planlama</option>
+                            </select>
+                        </div>
+                        <button type="button" onclick="window.location.href='consultation_booking.html'"
+                            class="btn-primary w-full">
+                            Avukatımı Bul
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Builder Section -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Fee Transparency -->
+                <div class="card text-center group hover:shadow-custom-lg">
+                    <div
+                        class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent-200 transition-custom">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-primary mb-4">Ücret Şeffaflığı</h3>
+                    <p class="text-secondary-600 mb-6">Gizli maliyet yok. Bilinçli kararlar için etkileşimli maliyet
+                        hesaplayıcısı ile net fiyatlandırma yapısı.</p>
+                    <button onclick="showCostCalculator()"
+                        class="text-accent font-semibold hover:text-accent-700 transition-custom">
+                        Maliyet Hesaplayıcısını Dene →
+                    </button>
+                </div>
+
+                <!-- Proven Results -->
+                <div class="card text-center group hover:shadow-custom-lg">
+                    <div
+                        class="w-16 h-16 bg-success-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-success-200 transition-custom">
+                        <svg class="w-8 h-8 text-success" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-primary mb-4">Kanıtlanmış Sonuçlar</h3>
+                    <p class="text-secondary-600 mb-4">Müvekkiller için 50M$+ tazminat, anlaşmalı davalarda %95 başarı
+                        oranı.</p>
+                    <div class="text-2xl font-bold text-success mb-2">2,847</div>
+                    <p class="text-sm text-secondary-500">Bu Yıl Kazanılan Dava</p>
+                    <a href="case_results.html"
+                        class="text-accent font-semibold hover:text-accent-700 transition-custom">
+                        Dava Sonuçlarını Görüntüle →
+                    </a>
+                </div>
+
+                <!-- 24/7 Support -->
+                <div class="card text-center group hover:shadow-custom-lg">
+                    <div
+                        class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-200 transition-custom">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-primary mb-4">7/24 Destek</h3>
+                    <p class="text-secondary-600 mb-6">Acil konular için günün her saati müsait acil hukuki yardım.</p>
+                    <div class="bg-error-50 text-error-500 px-4 py-2 rounded-lg text-sm font-semibold mb-4">
+                        Acil Hat: +90 (212) 123-4567
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attorney Spotlight Carousel -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-3xl lg:text-4xl font-bold text-primary mb-4">Hukuki Uzmanlarımızla Tanışın
+                </h2>
+                <p class="text-xl text-secondary-600 max-w-3xl mx-auto">
+                    Deneyimli avukatlarımız, hukuki mükemmellik ile şefkatli savunuculuğu birleştirerek olağanüstü
+                    sonuçlar sunar.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Attorney 1 -->
+                <div class="card group hover:shadow-custom-lg">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2940&auto=format&fit=crop"
+                            alt="Av. Deniz Hançer - Kurucu Ortak" class="w-full h-64 object-cover rounded-lg"
+                            onerror="this.src='https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div
+                            class="absolute top-4 right-4 bg-accent text-primary px-3 py-1 rounded-full text-sm font-semibold">
+                            Kurucu Ortak
+                        </div>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-primary mb-2">Av. Deniz Hançer</h3>
+                    <p class="text-accent font-semibold mb-3">Kurucu Ortak - Genel Hukuk Uzmanı</p>
+                    <p class="text-secondary-600 mb-4">15+ yıl deneyim, ticaret hukuku, sözleşmeler hukuku ve genel
+                        hukuki danışmanlık alanlarında uzman.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-secondary-500">Kurucu Ortak</span>
+                        <button class="text-accent hover:text-accent-700 transition-custom">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Attorney 2 -->
+                <div class="card group hover:shadow-custom-lg">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop"
+                            alt="Michael Chen - Family Law Specialist" class="w-full h-64 object-cover rounded-lg"
+                            onerror="this.src='https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg'; this.onerror=null;" />
+                        <div
+                            class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Ortak
+                        </div>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-primary mb-2">Michael Chen</h3>
+                    <p class="text-accent font-semibold mb-3">Aile Hukuku ve Boşanma</p>
+                    <p class="text-secondary-600 mb-4">Çocuk refahı ve adil anlaşmalara odaklanarak aile konularında
+                        şefkatli temsil.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-secondary-500">%98 Müşteri Memnuniyeti</span>
+                        <button class="text-accent hover:text-accent-700 transition-custom">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Attorney 3 -->
+                <div class="card group hover:shadow-custom-lg">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?q=80&w=2940&auto=format&fit=crop"
+                            alt="Jennifer Rodriguez - Business Law Expert" class="w-full h-64 object-cover rounded-lg"
+                            onerror="this.src='https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div
+                            class="absolute top-4 right-4 bg-success text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Ortak
+                        </div>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-primary mb-2">Jennifer Rodriguez</h3>
+                    <p class="text-accent font-semibold mb-3">İş Hukuku ve Kurumsal Dava</p>
+                    <p class="text-secondary-600 mb-4">Startup'lardan Fortune 500 şirketlerine kanıtlanmış geçmişe sahip
+                        stratejik iş danışmanlığı.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-secondary-500">150+ İşletmeye Hizmet</span>
+                        <button class="text-accent hover:text-accent-700 transition-custom">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="about_values.html" class="btn-secondary">Tüm Avukatları Görüntüle</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Resource Center Preview -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-playfair text-3xl lg:text-4xl font-bold text-primary mb-6">
+                        Parmaklarınızın Ucunda Anında Hukuki Rehberlik
+                    </h2>
+                    <p class="text-xl text-secondary-600 mb-8">
+                        Haklarınızı ve seçeneklerinizi anlamak için kapsamlı hukuki kaynak kütüphanemize, belge
+                        şablonlarımıza ve uzman rehberlerimize erişin.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <svg class="w-6 h-6 text-success mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
+                            <span class="text-secondary-700">Ücretsiz indirilebilir hukuki belge şablonları</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-6 h-6 text-success mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
+                            <span class="text-secondary-700">Adım adım hukuki süreç rehberleri</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-6 h-6 text-success mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
+                            <span class="text-secondary-700">Uzman hukuki görüşler ve analizler</span>
+                        </div>
+                    </div>
+
+                    <a href="legal_resource_center.html" class="btn-primary">Kaynakları Keşfet</a>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="card">
+                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold text-primary mb-2">Hukuki Formlar</h4>
+                        <p class="text-sm text-secondary-600">200+ şablon</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6Z" />
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold text-primary mb-2">Hukuki Rehberler</h4>
+                        <p class="text-sm text-secondary-600">Uzman görüşleri</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,14H13V16H11V14M11,10H13V12H11V10Z" />
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold text-primary mb-2">SSS Merkezi</h4>
+                        <p class="text-sm text-secondary-600">Sık sorulan sorular</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="w-12 h-12 bg-warning-100 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-warning" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6Z" />
+                            </svg>
+                        </div>
+                        <h4 class="font-semibold text-primary mb-2">Hesaplayıcılar</h4>
+                        <p class="text-sm text-secondary-600">Maliyet tahmincileri</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-3xl lg:text-4xl font-bold text-primary mb-4">Müşterilerimiz Ne Diyor</h2>
+                <p class="text-xl text-secondary-600">DH HUKUK BÜROSU ile adaleti bulan gerçek müşterilerden gerçek
+                    hikayeler</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Video Testimonial 1 -->
+                <div class="relative group cursor-pointer" onclick="playTestimonial(1)">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2940&auto=format&fit=crop"
+                            alt="Client testimonial video"
+                            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                            onerror="this.src='https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="font-semibold text-primary">Maria Santos</h4>
+                        <p class="text-sm text-secondary-600 mb-2">Kişisel Yaralanma Davası</p>
+                        <p class="text-secondary-700">"DH HUKUK BÜROSU ailem için yorulmadan savaştı. Şeffaflıkları ve
+                            adanmışlıkları her şeyi değiştirdi."</p>
+                    </div>
+                </div>
+
+                <!-- Video Testimonial 2 -->
+                <div class="relative group cursor-pointer" onclick="playTestimonial(2)">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop"
+                            alt="Client testimonial video"
+                            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                            onerror="this.src='https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="font-semibold text-primary">David Thompson</h4>
+                        <p class="text-sm text-secondary-600 mb-2">İş Davası</p>
+                        <p class="text-secondary-700">"Profesyonel, bilgili ve sonuç odaklı. İşletmemi kurtardılar ve
+                            beklentileri aştılar."</p>
+                    </div>
+                </div>
+
+                <!-- Video Testimonial 3 -->
+                <div class="relative group cursor-pointer" onclick="playTestimonial(3)">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2940&auto=format&fit=crop"
+                            alt="Client testimonial video"
+                            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                            onerror="this.src='https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="font-semibold text-primary">Lisa Chen</h4>
+                        <p class="text-sm text-secondary-600 mb-2">Aile Hukuku</p>
+                        <p class="text-secondary-700">"Zor bir dönemde şefkatli destek. Çocuklarımın çıkarlarını özenle
+                            korudular."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Case Results Ticker -->
+    <section class="py-8 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <h3 class="font-playfair text-xl font-bold">Son Zaferler</h3>
+                <a href="case_results.html" class="text-accent hover:text-accent-300 transition-custom">Tüm Sonuçları
+                    Görüntüle →</a>
+            </div>
+            <div class="mt-4 overflow-hidden">
+                <div class="flex animate-pulse space-x-8">
+                    <div class="flex-shrink-0 bg-primary-700 rounded-lg px-4 py-2">
+                        <span class="text-accent font-bold">1.2M$</span> Kişisel Yaralanma Anlaşması
+                    </div>
+                    <div class="flex-shrink-0 bg-primary-700 rounded-lg px-4 py-2">
+                        <span class="text-accent font-bold">Kazanıldı</span> Karmaşık İş Anlaşmazlığı
+                    </div>
+                    <div class="flex-shrink-0 bg-primary-700 rounded-lg px-4 py-2">
+                        <span class="text-accent font-bold">850K$</span> Tıbbi Malpraktis Ödülü
+                    </div>
+                    <div class="flex-shrink-0 bg-primary-700 rounded-lg px-4 py-2">
+                        <span class="text-accent font-bold">Reddedildi</span> Ceza Suçlamaları
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <svg class="h-8 w-8 text-accent mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z" />
+                            <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" fill="none" />
+                        </svg>
+                        <span class="font-playfair text-xl font-bold">DH HUKUK BÜROSU</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Karmaşık hukuki konularda netlik, şeffaflık ve olağanüstü sonuçlar sağlayan güvenilir hukuki
+                        ortağınız.
+                    </p>
+                    <div class="space-y-2">
+                        <p class="text-gray-300">📞 Acil: +90 (212) 123-4567</p>
+                        <p class="text-gray-300">📧 info@hancer.av.tr</p>
+                        <p class="text-gray-300">📍 İstanbul, Türkiye</p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-playfair text-lg font-bold mb-6">Hızlı Bağlantılar</h4>
+                    <ul class="space-y-3">
+                        <li><a href="homepage.html" class="text-gray-300 hover:text-accent transition-custom">Ana
+                                Sayfa</a></li>
+                        <li><a href="case_results.html" class="text-gray-300 hover:text-accent transition-custom">Dava
+                                Sonuçları</a></li>
+                        <li><a href="legal_resource_center.html"
+                                class="text-gray-300 hover:text-accent transition-custom">Hukuki Kaynaklar</a></li>
+                        <li><a href="consultation_booking.html"
+                                class="text-gray-300 hover:text-accent transition-custom">Danışmanlık Al</a></li>
+                        <li><a href="client_portal.html"
+                                class="text-gray-300 hover:text-accent transition-custom">Müşteri Portalı</a></li>
+                    </ul>
+                </div>
+
+                <!-- Practice Areas -->
+                <div>
+                    <h4 class="font-playfair text-lg font-bold mb-6">Çalışma Alanları</h4>
+                    <ul class="space-y-3">
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-300 hover:text-accent transition-custom">Kişisel Yaralanma</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-custom">Aile
+                                Hukuku</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-custom">İş
+                                Hukuku</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-custom">Miras
+                                Planlaması</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-custom">Ceza
+                                Savunması</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8">
+                <div class="mb-6 p-4 bg-gray-800 rounded-lg">
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        <strong>www.hancer.av.tr</strong> Herhangi bir şekilde hukuki görüş veya dayanak olarak
+                        kullanılmamalıdır. İçerikler güncelliğini yitirebilir ve yürürlükte olan mevzuat veya hukuki
+                        uygulamaların son halini yansıtmayabilir. Bu nedenle DH HUKUK BÜROSU bu sitede yer alan
+                        bilgilerdeki herhangi bir yanlışlık veya eksiklikten veya bu bilgilerin kullanımından doğan
+                        sonuçlardan sorumlu tutulamaz, ziyaretçiler sunulan içeriklerin doğru olmadığını veya bu
+                        içerikler nedeniyle zarar gördüklerini iddia edemezler. Bu sitedeki tüm bilgi ve dosyaların
+                        mülkiyeti DH HUKUK BÜROSU'na ait olup, yazılı iznimiz olmadan kopyalanamaz, çoğaltılamaz ve
+                        kullanılmaz. DH HUKUK BÜROSU tarafından açıkça yazılı şekilde izin verilmediği sürece, bu sitede
+                        yeni linkler açılması ve/veya bu siteye link yaratılması kesinlikle yasaktır.
+                    </p>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400">© 2025 DH HUKUK BÜROSU. Tüm Hakları Saklıdır.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-accent transition-custom">Gizlilik
+                            Politikası</a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-accent transition-custom">Hizmet
+                            Şartları</a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-accent transition-custom">Etik</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Consultation Button (Mobile) -->
+    <div class="fixed bottom-4 right-4 md:hidden z-50">
+        <a href="consultation_booking.html" class="btn-accent shadow-custom-lg">
+            📞 Ücretsiz Danışmanlık
+        </a>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function showCostCalculator() {
+            alert('Maliyet Hesaplayıcısı özelliği yakında geliyor! Spesifik hukuki ihtiyaçlarınızı ve fiyatlandırmayı tartışmak için ücretsiz danışmanlık için bizimle iletişime geçin.');
+        }
+
+        function playTestimonial(id) {
+            alert(`Yorum videosu ${id} oynatılıyor. Gerçek bir uygulamada bu, bir video modalı açacak veya video oynatıcıya yönlendirecektir.`);
+        }
+
+        function changeLanguage(lang) {
+            // Dil değiştirme fonksiyonu
+            const currentPage = window.location.pathname.split('/').pop();
+            let targetPage = '';
+
+            switch (lang) {
+                case 'tr':
+                    targetPage = currentPage;
+                    break;
+                case 'en':
+                    targetPage = currentPage.replace('.html', '_en.html');
+                    break;
+                case 'de':
+                    targetPage = currentPage.replace('.html', '_de.html');
+                    break;
+                case 'ru':
+                    targetPage = currentPage.replace('.html', '_ru.html');
+                    break;
+                default:
+                    targetPage = currentPage;
+            }
+
+            // Dil tercihini localStorage'a kaydet
+            localStorage.setItem('preferred-language', lang);
+
+            // Sayfa yönlendirmesi (şimdilik alert göster)
+            alert(`Dil değiştirildi: ${lang.toUpperCase()}\n\nBu özellik geliştirilme aşamasındadır. Çok dilli sayfalar yakında eklenecektir.`);
+
+            // Gerçek uygulamada şu şekilde yönlendirme yapılabilir:
+            // window.location.href = targetPage;
+        }
+
+        // Sayfa yüklendiğinde kaydedilen dil tercihini yükle
+        document.addEventListener('DOMContentLoaded', function () {
+            const savedLanguage = localStorage.getItem('preferred-language');
+            if (savedLanguage) {
+                const desktopSelector = document.getElementById('language-selector');
+                const mobileSelector = document.getElementById('mobile-language-selector');
+
+                if (desktopSelector) desktopSelector.value = savedLanguage;
+                if (mobileSelector) mobileSelector.value = savedLanguage;
+            }
+        });
+    </script>
+    <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+
+</html>

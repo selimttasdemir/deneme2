@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Navigation Components */
+@layer components {
+  .nav-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .nav-header {
+    @apply bg-primary-800 shadow-lg sticky top-0 z-50;
+  }
+
+  .nav-logo {
+    @apply flex items-center group;
+  }
+
+  .nav-logo-text {
+    @apply font-playfair text-2xl font-bold text-white group-hover:text-accent-300 transition-colors duration-300;
+  }
+
+  .nav-desktop {
+    @apply hidden lg:block flex-1;
+  }
+
+  .nav-menu {
+    @apply ml-12 flex items-center space-x-3;
+  }
+
+  .nav-link {
+    @apply relative text-white font-medium px-4 py-2 rounded-lg transition-all duration-300
+           hover:bg-primary-700 hover:text-accent-200 hover:shadow-md hover:scale-105;
+  }
+
+  .nav-link-active {
+    @apply bg-primary-700 text-accent-200;
+  }
+
+  .nav-button {
+    @apply flex items-center justify-center bg-accent-600 text-white font-semibold px-6 py-2 rounded-lg
+           shadow-md transition-all duration-300 hover:bg-accent-500 hover:shadow-lg hover:scale-105;
+  }
+
+  .nav-mobile-menu {
+    @apply lg:hidden;
+  }
+
+  .nav-mobile-button {
+    @apply text-white hover:text-accent-300 transition-colors duration-300 p-2 rounded-lg hover:bg-primary-700;
+  }
+
+  .nav-mobile-panel {
+    @apply lg:hidden bg-primary-800 border-t border-primary-700;
+  }
+
+  .nav-mobile-link {
+    @apply text-white hover:text-accent-200 block px-4 py-3 hover:bg-primary-700 transition-colors duration-300;
+  }
+
+  .lang-selector {
+    @apply bg-primary-700 border border-primary-600 rounded-lg px-3 py-2 text-sm text-white
+           focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500;
+  }
+
+  .lang-option {
+    @apply bg-primary-800 text-white;
+  }
+}

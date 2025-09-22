@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hukuki Kaynak Merkezi - DH HUKUK BÜROSU</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+    <meta name="description"
+        content="Rehberler, şablonlar, hesaplayıcılar ve uzman kaynakları ile kapsamlı hukuki eğitim merkezi. Anında hukuki rehberlik ve eğitim içeriği alın." />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="">
+        !function () { let e = !1, t = !1, n = !1; try { e = window.self === window.top, t = window.self?.location?.host && (window.self.location.host.includes(".netlify.app") || window.self.location.host.includes(".public.builtwithrocket.new")), n = navigator?.userAgent?.includes("Puppeteer") } catch (e) { } let o = "", i = ""; try { const e = function () { const e = document.getElementsByTagName("script"); for (let t of e) if (t.src.includes("rocket-web.js")) return t.src; return null }(), t = new URL(e), n = new URLSearchParams(t?.search); o = n.get("_cfg") || "", i = n.get("_be") || "" } catch (e) { } function a(t) { e || n || fetch(`${o}/log-error`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(t) }).catch(e => { }) } function r(t) { e || n || fetch(`${o}/logs`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(t) }).catch(e => { }) } function s(o) { e && t && !n && function (e, t) { i && fetch(`${i}/preview/v1/track`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(e) }).then(e => { if (!e.ok) throw new Error("Bad response"); return e.json() }).then(e => { t(e) }).catch(e => { }) }({ event: "Public Preview Viewed", baseUrl: window.location.origin, previewUrl: window.location.href }, e => { "function" == typeof o && e?.isPublic && o() }) } function d() { window.parent && window.parent !== window && window.parent.postMessage({ type: "WEB_IFRAME_PATHNAME_CHANGE", pathname: window.location.pathname }, "*") } function c() { try { const e = document.createElement("link"); e.rel = "stylesheet", e.href = "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap", document.head.appendChild(e); const t = document.createElement("div"); t.style.position = "fixed", t.style.right = "0", t.style.bottom = "0", t.style.zIndex = "100000", t.style.transform = "scale(0.7)", t.style.display = "block", t.style.cursor = "pointer", t.onclick = () => window.open("https://www.rocket.new", "_blank"), t.innerHTML = '\n          <div style="\n            border-radius: 6px;\n            background: #fff;\n            box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.20);\n            display: flex;\n            padding: 4px;\n            justify-content: center;\n            align-items: center;\n            gap: 8px;\n            flex-direction: column;\n          ">\n            <div style="\n              border: 2px solid #000;\n              border-radius: 6px;\n              display: flex;\n              flex-direction: column;\n              padding: 10px;\n            ">\n              <img src="https://strapi.rocket.new/uploads/rocket_mono_e0dedcb10b.png" style="\n                width: 30px;\n                margin: auto auto 8px auto;\n              ">\n              <h3 style="\n                text-align: center;\n                font-family: Inter, sans-serif;\n                font-size: 12px;\n                font-style: normal;\n                font-weight: 500;\n                line-height: 20px;\n                color: #777777;\n                margin: 0;\n              ">Built with</h3>\n              <h3 style="\n                font-family: Inter, sans-serif;\n                font-size: 14px;\n                font-style: normal;\n                font-weight: 500;\n                line-height: 20px;\n                color: #000;\n                margin-top: -4px;\n                margin-bottom: 0;\n              ">Rocket.new</h3>\n            </div>\n          </div>\n        ', document.body.appendChild(t) } catch (e) { } } if (window.parent && window.parent !== window && window.parent.postMessage({ type: "WEB_IFRAME_LOADING" }, "*"), d(), document.addEventListener("DOMContentLoaded", () => { window.parent && window.parent !== window && window.parent.postMessage({ type: "WEB_IFRAME_DOCUMENT_LOADED" }, "*"), s(c) }), window.history && window.history.pushState) { const e = window.history.pushState; window.history.pushState = function () { e.apply(this, arguments), d(), s() }; const t = window.history.replaceState; window.history.replaceState = function () { t.apply(this, arguments), d(), s() }, window.addEventListener("popstate", function () { d(), s() }) } window.addEventListener("hashchange", function () { d(), s() }), window.__COMPONENT_ERROR__ = function (e, t) { let n = e?.stack || null, o = !1; n && n.includes(e.message) && (o = !0); let i = n ? o ? n : `${e.message}\n\n${n}` : e.message; t.componentStack && (i += t.componentStack), a({ errorType: "RUNTIME_ERROR", message: i, timestamp: (new Date).toISOString() }) }, window.onerror = function (e, t, n, o, i) { const s = i?.stack || null, d = s ? `${e}\n\n${s}` : e; r({ type: "CONSOLE_ERROR", message: d, timestamp: (new Date).toISOString(), url: window.location.href }), a({ errorType: "RUNTIME_ERROR", message: d, timestamp: (new Date).toISOString() }) }, window.onunhandledrejection = function (e) { const t = e.reason?.message || String(e.reason), n = e.reason?.stack || null, o = n ? `${t}\n\n${n}` : t; r({ type: "CONSOLE_ERROR", message: o, timestamp: (new Date).toISOString(), url: window.location.href }), a({ errorType: "RUNTIME_ERROR", message: o, timestamp: (new Date).toISOString() }) }; const l = console.error, p = console.log, u = console.warn, m = console.info, h = console.debug; function g(e) { return e?.map(e => { if (e instanceof Error) { const t = e?.stack || null; return t ? `${e.message}\n\n${t}` : e.message } return e instanceof HTMLElement ? e.outerHTML : "object" == typeof e && null !== e ? JSON.stringify(e, null, 2) : String(e) }).join(" ") } console.error = function (...e) { setTimeout(() => { const t = e.some(e => !0 === e.__ErrorBoundary); r({ type: "CONSOLE_ERROR", message: g(e), timestamp: (new Date).toISOString(), url: window.location.href }), t || a({ errorType: "RUNTIME_ERROR", message: g(e), timestamp: (new Date).toISOString() }), l.apply(console, e) }, 100) }, console.log = function (...e) { r({ type: "CONSOLE_LOG", message: g(e), timestamp: (new Date).toISOString(), url: window.location.href }), p.apply(console, e) }, console.warn = function (...e) { r({ type: "CONSOLE_WARN", message: g(e), timestamp: (new Date).toISOString(), url: window.location.href }), u.apply(console, e) }, console.info = function (...e) { r({ type: "CONSOLE_INFO", message: g(e), timestamp: (new Date).toISOString(), url: window.location.href }), m.apply(console, e) }, console.debug = function (...e) { r({ type: "CONSOLE_DEBUG", message: g(e), timestamp: (new Date).toISOString(), url: window.location.href }), h.apply(console, e) }; let w = null, f = null; const y = { MARGIN_TOP: "margin-top", MARGIN_RIGHT: "margin-right", MARGIN_BOTTOM: "margin-bottom", MARGIN_LEFT: "margin-left", PADDING_TOP: "padding-top", PADDING_RIGHT: "padding-right", PADDING_BOTTOM: "padding-bottom", PADDING_LEFT: "padding-left", BACKGROUND_COLOR: "background-color", BORDER_RADIUS_TOP_LEFT: "border-top-left-radius", BORDER_RADIUS_TOP_RIGHT: "border-top-right-radius", BORDER_RADIUS_BOTTOM_RIGHT: "border-bottom-right-radius", BORDER_RADIUS_BOTTOM_LEFT: "border-bottom-left-radius", FONT_SIZE: "font-size", FONT_WEIGHT: "font-weight", TEXT_ALIGN: "text-align", TEXT_COLOR: "color", LINE_HEIGHT: "line-height", TEXT_TRANSFORM: "text-transform", LETTER_SPACING: "letter-spacing", BORDER_STYLE: "border-style", BORDER_COLOR: "border-color", BORDER_RIGHT_WIDTH: "border-right-width", BORDER_BOTTOM_WIDTH: "border-bottom-width", BORDER_LEFT_WIDTH: "border-left-width", BORDER_TOP_WIDTH: "border-top-width", TEXT_CONTENT: "text-content", OBJECT_FIT: "object-fit", IMAGE_SRC: "image-src", DISPLAY: "display", FLEX_DIRECTION: "flex-direction", JUSTIFY_CONTENT: "justify-content", ALIGN_ITEMS: "align-items", GRID_TEMPLATE_COLUMNS: "grid-template-columns", GRID_TEMPLATE_ROWS: "grid-template-rows", GRID_COLUMN_GAP: "grid-column-gap", GRID_ROW_GAP: "grid-row-gap", PLACE_ITEMS: "place-items", FLEX_GAP: "gap" }; function E() { if (f) try { f.abort() } catch (e) { } finally { f = null } } function T(e) { e.stopPropagation(), e.preventDefault(); const t = e.target; if (!t.ownerSVGElement && "BODY" !== t.tagName && "HTML" !== t.tagName) { const e = t.dataset.componentId; e && document.querySelectorAll(`[data-component-id="${e}"]`).forEach(e => { e.setAttribute("data-component-hovered", "true") }); const n = t.getBoundingClientRect(), o = document.getElementById("highlighter"); o && (o.style.display = "block", o.style.top = n.top - 25 + "px", o.style.left = `${n.left}px`, o.innerText = t.tagName?.toLowerCase()) } } function O(e) { e.stopPropagation(), e.preventDefault(); const t = document.getElementById("highlighter"); t && (t.style.display = "none"); const n = e.target.dataset?.componentId; n ? document.querySelectorAll(`[data-component-id="${n}"]`).forEach(e => { e.removeAttribute("data-component-hovered") }) : e.target.removeAttribute("data-component-hovered") } function _(e) { e.preventDefault(), e.stopPropagation(); const { target: t } = e, n = function (e) { if (!e) return {}; const t = window.getComputedStyle(e), n = {}; return Object.keys(y).forEach(e => { n[y[e]] = t.getPropertyValue(y[e]) }), n }(t); document.querySelectorAll('[data-component-selected="true"]').forEach(e => { e.removeAttribute("data-component-selected") }); const o = t.dataset.componentId; o && document.querySelectorAll(`[data-component-id="${o}"]`).forEach(e => { e.setAttribute("data-component-selected", "true") }); const i = 0 === t?.children.length && t?.childNodes.length > 0, a = t instanceof HTMLImageElement; w = o; const r = t.dataset?.componentLine ?? "0", s = Number(r), d = { filePath: t.dataset?.componentPath ?? "", lineNumber: Number.isNaN(s) ? 0 : s, content: t.dataset?.componentContent ?? "", elementName: t.tagName?.toLocaleLowerCase() ?? "", componentId: o ?? "" }, c = { styles: n, browserClassNames: t.className?.trim?.() || "", metaData: d }; i && Object.assign(c, { textData: { textContent: e.target?.innerText ?? "" } }), a && Object.assign(c, { imageData: { imageSrc: e.target.src ?? "" } }), window.parent.postMessage({ type: "SET_INITIAL_DATA", payload: c }, "*") } window.addEventListener("message", function (e) { if ("SET_EDIT_MODE" === e.data.type && window.toggleEditMode(e.data.payload), "NAVIGATION_REQUEST" === e.data.type && (window?.next && window.next?.router ? window.next.router.push(e.data.url) : (history.pushState({}, "", e.data.url), window.dispatchEvent(new PopStateEvent("popstate")))), w) { if ("UPDATE_STYLES" === e.data.type) { const t = e.data.payload; document.querySelectorAll(`[data-component-id="${w}"]`).forEach(e => { Object.assign(e.style, t) }) } if ("UPDATE_TEXT" === e.data.type) { const t = e.data.payload?.textContent; "string" == typeof t && (document.querySelector(`[data-component-id="${w}"]`).innerText = t) } if ("UPDATE_IMAGE_SRC" === e.data.type) { const t = e.data.payload?.imageSrc; "string" == typeof t && (document.querySelector(`[data-component-id="${w}"]`).src = t) } if ("UPDATE_CLASSNAMES" === e.data.type) { const t = e.data.payload; "string" == typeof t?.classNames && (document.querySelector(`[data-component-id="${w}"]`).className = t.classNames) } } }), window.toggleEditMode = function (e) { e ? function () { E(); try { f = new AbortController; const e = f.signal; (function () { if (function () { const e = document.createElement("style"); e.innerHTML = "\n            #highlighter {\n                position: fixed;\n                z-index: 10000;\n                pointer-events: none;\n                background-color: #0da2e7;\n                color: white;\n                padding: 4px 8px;\n                border-radius: 4px;\n                font-size: 14px;\n                font-weight: bold;\n                line-height: 1;\n                white-space: nowrap;\n                display: none;\n                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);\n                transition: opacity 0.2s ease-in-out;\n                margin: 0;\n            }\n            [data-component-hovered] {\n                position: relative;\n            }\n            [data-component-hovered]::before {\n                content: '';\n                position: absolute;\n                top: 0;\n                left: 0;\n                width: 100%;\n                height: 100%;\n                border-radius: 0px;\n                outline: 1px dashed #0da2e7 !important;\n                outline-offset: 0 !important;\n                background-color: #0da2e71a !important;\n                z-index: 10000;\n                pointer-events: none;\n            }\n            [data-component-selected] {\n                position: relative;\n            }\n            [data-component-selected]::before {\n                content: '';\n                position: absolute;\n                top: 0;\n                left: 0;\n                width: 100%;\n                height: 100%;\n                border-radius: 0px;\n                outline: 1px dashed #0da2e7 !important;\n                outline-offset: 3px !important;\n                transition: outline-offset 0.2s ease-in-out;\n                z-index: 10000;\n                pointer-events: none;\n            }\n            [data-component-selected][contenteditable] {\n                outline: none !important;\n            }\n            [data-component-hovered][data-full-width]::before,\n            [data-component-selected][data-full-width]::before {\n                outline-offset: -5px !important;\n            }\n        "; const t = document.head.querySelectorAll('link[rel="stylesheet"]'); if (t.length > 0) document.head.insertBefore(e, t[0]); else { const t = document.head.querySelectorAll("style"); t.length > 0 ? document.head.insertBefore(e, t[0]) : document.head.appendChild(e) } }(), !document.getElementById("highlighter")) { const e = document.createElement("div"); e.id = "highlighter"; const t = document.body || document.getElementsByTagName("body")[0]; t && t.appendChild(e) } })(), document.addEventListener("mouseover", T, { capture: !0, signal: e }), document.addEventListener("mouseout", O, { capture: !0, signal: e }), document.addEventListener("click", _, { capture: !0, signal: e }) } catch (e) { } }() : E() }, function () { const e = (e, t) => { try { const n = ((e, t) => { try { const n = e === window || e === document || e === document.documentElement, o = window.innerWidth || document.documentElement.clientWidth, i = window.innerHeight || document.documentElement.clientHeight, a = window.scrollX, r = window.scrollY; let s = null; if (t) { const o = t.clientX || t.touches?.[0]?.clientX, i = t.clientY || t.touches?.[0]?.clientY; if (void 0 !== o && void 0 !== i && (s = { viewport: { x: Math.round(o), y: Math.round(i) }, page: { x: Math.round(o + a), y: Math.round(i + r) } }, !n && e?.getBoundingClientRect)) { const t = e.getBoundingClientRect(); s.element = { x: Math.round(o - t.left), y: Math.round(i - t.top) } } } if (n) return { tag: "document", id: "", position: { x: a, y: r, width: o, height: i }, viewport: { width: o, height: i }, scroll: { x: a, y: r }, mouse: s }; if (!e?.getBoundingClientRect) return null; const d = e.getBoundingClientRect(); return { tag: e.tagName?.toLowerCase() || "", id: e.id || "", position: { x: Math.round(d.left + a), y: Math.round(d.top + r), width: Math.round(d.width), height: Math.round(d.height) }, viewport: { width: o, height: i }, scroll: { x: a, y: r }, mouse: s } } catch (e) { return null } })(t.target || t.srcElement, t); if (!n) return; const o = { eventType: e, timestamp: (new Date).toISOString(), element: n, page: window.location.pathname }; window.parent.postMessage({ type: "USER_INTERACTION", payload: o }, "*") } catch (e) { } }, t = (() => { let t; return function (...n) { clearTimeout(t), t = setTimeout(() => { clearTimeout(t), (t => { e("mousemove", t) })(...n) }, 10) } })(); document.addEventListener("mousemove", t), document.addEventListener("click", t => e("click", t)), document.addEventListener("dblclick", t => e("dblclick", t)), document.addEventListener("mouseenter", t => e("mouseenter", t)), document.addEventListener("mouseleave", t => e("mouseleave", t)), document.addEventListener("touchstart", t => e("touchstart", t)), document.addEventListener("touchmove", t => e("touchmove", t)), document.addEventListener("touchend", t => e("touchend", t)), document.addEventListener("keydown", t => e("keydown", t)); const n = ["input", "textarea", "select", "button", '[contenteditable="true"]']; document.addEventListener("focusin", t => { n.some(e => t.target.matches(e)) && e("focus", t) }), document.addEventListener("focusout", t => { n.some(e => t.target.matches(e)) && e("blur", t) }); const o = t => n => { var o; (o = n.target) && (o === document || o === document.documentElement || o === window || o.scrollHeight > o.clientHeight || o.scrollWidth > o.clientWidth) && e(t, n) }, i = o("scroll"), a = o("scrollend"), r = () => { try { window.addEventListener("scroll", i, { passive: !0 }), window.addEventListener("scrollend", a, { passive: !0 }), document.querySelectorAll("*").forEach(e => { (e.scrollHeight > e.clientHeight || e.scrollWidth > e.clientWidth) && (e.addEventListener("scroll", i, { passive: !0 }), e.addEventListener("scrollend", a, { passive: !0 })) }) } catch (e) { } }; r(), new MutationObserver(() => { r() }).observe(document.body, { childList: !0, subtree: !0 }) }() }();
+    </script>
+</head>
+
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="homepage.html">DH HUKUK BÜROSU</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="homepage.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="case_results.html">Dava Sonuçları</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="legal_resource_center.html">Hukuki Kaynaklar</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Diğer Sayfalar
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about_values.html">Hakkımızda</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="consultation_booking.html">Danışmanlık Al</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <select class="form-select me-2" onchange="changeLanguage(this.value)">
+                        <option value="tr" selected>🇹🇷 Türkçe</option>
+                        <option value="en">🇺🇸 English</option>
+                        <option value="de">🇩🇪 Deutsch</option>
+                        <option value="ru">🇷🇺 Русский</option>
+                    </select>
+                    <a href="consultation_booking.html" class="btn btn-outline-primary">Ücretsiz Danışmanlık</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <div class="md:hidden">
+        <button type="button" class="text-secondary-600 hover:text-primary" onclick="toggleMobileMenu()">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="md:hidden hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+            <a href="homepage.html" class="text-secondary-600 hover:text-primary block px-3 py-2">Ana Sayfa</a>
+            <a href="case_results.html" class="text-secondary-600 hover:text-primary block px-3 py-2">Dava Sonuçları</a>
+            <a href="legal_resource_center.html" class="text-primary font-semibold block px-3 py-2">Hukuki Kaynaklar</a>
+            <a href="about_values.html" class="text-secondary-600 hover:text-primary block px-3 py-2">Hakkımızda</a>
+            <a href="client_portal.html" class="text-secondary-600 hover:text-primary block px-3 py-2">Müşteri
+                Portalı</a>
+
+            <!-- Mobile Language Selector -->
+            <div class="px-3 py-2">
+                <label class="block text-sm font-medium text-gray-700 mb-2">Dil / Language</label>
+                <select id="mobile-language-selector"
+                    class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500"
+                    onchange="changeLanguage(this.value)">
+                    <option value="tr" selected>🇹🇷 Türkçe</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="de">🇩🇪 Deutsch</option>
+                    <option value="ru">🇷🇺 Русский</option>
+                </select>
+            </div>
+
+            <a href="consultation_booking.html" class="btn-accent w-full text-center mt-4">Ücretsiz Danışmanlık</a>
+        </div>
+    </div>
+    </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+        class="relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop"
+                alt="Legal education and resources" class="w-full h-full object-cover opacity-30"
+                onerror="this.src='https://images.pexels.com/photos/159832/justice-law-case-hearing-159832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+            <div class="text-center">
+                <h1 class="font-playfair text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                    Hukuki <span class="text-accent">Bilgi Merkeziniz</span>
+                </h1>
+                <p class="text-xl lg:text-2xl mb-8 text-gray-200 leading-relaxed max-w-4xl mx-auto">
+                    Haklarınızı anlamanız, hukuki süreçleri yönetmeniz ve bilinçli kararlar almanız için kapsamlı hukuki
+                    eğitim, kaynaklar ve araçlar.
+                </p>
+
+                <!-- Search Bar -->
+                <div class="max-w-2xl mx-auto">
+                    <div class="relative">
+                        <input type="text" placeholder="Hukuki konuları arayın, rehberleri inceleyin veya soru sorun..."
+                            class="w-full px-6 py-4 pr-16 rounded-xl text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-accent-500"
+                            id="resource-search" />
+                        <button
+                            class="absolute right-2 top-2 bg-accent text-primary px-6 py-2 rounded-lg font-semibold hover:bg-accent-600 transition-custom">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-4 justify-center">
+                        <span class="text-sm text-gray-300">Popüler aramalar:</span>
+                        <button class="text-accent hover:text-accent-300 text-sm underline">Boşanma Süreci</button>
+                        <button class="text-accent hover:text-accent-300 text-sm underline">Kişisel Yaralanma
+                            Talepleri</button>
+                        <button class="text-accent hover:text-accent-300 text-sm underline">İş Sözleşmeleri</button>
+                        <button class="text-accent hover:text-accent-300 text-sm underline">Miras Planlaması</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Access Tools -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-3xl lg:text-4xl font-bold text-primary mb-4">Anında Hukuki Yardım</h2>
+                <p class="text-xl text-secondary-600">Etkileşimli araçlarımız ve hesaplayıcılarımızla anında yardım alın
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <!-- Cost Calculator -->
+                <div class="card text-center group hover:shadow-custom-lg cursor-pointer"
+                    onclick="openCostCalculator()">
+                    <div
+                        class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent-200 transition-custom">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4H20C20.55 4 21 4.45 21 5S20.55 6 20 6H19V19C19 20.1 18.1 21 17 21H7C5.9 21 5 20.1 5 19V6H4C3.45 6 3 5.55 3 5S3.45 4 4 4H7ZM9 3V4H15V3H9ZM7 6V19H17V6H7Z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-primary mb-4">Maliyet Hesaplayıcısı</h3>
+                    <p class="text-secondary-600">Spesifik dava türünüz için hukuki ücretleri tahmin edin</p>
+                </div>
+
+                <!-- Document Templates -->
+                <div class="card text-center group hover:shadow-custom-lg cursor-pointer"
+                    onclick="showDocumentTemplates()">
+                    <div
+                        class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-200 transition-custom">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-primary mb-4">Hukuki Şablonlar</h3>
+                    <p class="text-secondary-600">Ücretsiz hukuki belge şablonlarını indirin</p>
+                </div>
+
+                <!-- Self Assessment -->
+                <div class="card text-center group hover:shadow-custom-lg cursor-pointer" onclick="startAssessment()">
+                    <div
+                        class="w-16 h-16 bg-success-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-success-200 transition-custom">
+                        <svg class="w-8 h-8 text-success" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,14H13V16H11V14M11,10H13V12H11V10Z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-primary mb-4">Dava Değerlendirmesi</h3>
+                    <p class="text-secondary-600">Rehberli sorularla hukuki durumunuzu değerlendirin</p>
+                </div>
+
+                <!-- Legal Checklist -->
+                <div class="card text-center group hover:shadow-custom-lg cursor-pointer" onclick="viewChecklists()">
+                    <div
+                        class="w-16 h-16 bg-warning-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-warning-200 transition-custom">
+                        <svg class="w-8 h-8 text-warning" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M10,17L5,12L6.41,10.58L10,14.17L17.59,6.58L19,8M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-primary mb-4">Hukuki Kontrol Listeleri</h3>
+                    <p class="text-secondary-600">Adım adım hazırlık rehberleri</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resource Categories -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-3xl lg:text-4xl font-bold text-primary mb-4">Hukuki Kaynak Kütüphanesi
+                </h2>
+                <p class="text-xl text-secondary-600">Çalışma alanı ve karmaşıklık seviyesine göre düzenlenmiş kapsamlı
+                    rehberler</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="px-6 py-3 bg-primary text-white rounded-lg font-semibold"
+                    onclick="filterResources('all')">Tüm Kaynaklar</button>
+                <button
+                    class="px-6 py-3 bg-gray-200 text-secondary-700 rounded-lg font-semibold hover:bg-gray-300 transition-custom"
+                    onclick="filterResources('basic')">Temel</button>
+                <button
+                    class="px-6 py-3 bg-gray-200 text-secondary-700 rounded-lg font-semibold hover:bg-gray-300 transition-custom"
+                    onclick="filterResources('intermediate')">Orta</button>
+                <button
+                    class="px-6 py-3 bg-gray-200 text-secondary-700 rounded-lg font-semibold hover:bg-gray-300 transition-custom"
+                    onclick="filterResources('advanced')">İleri</button>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Personal Injury Resources -->
+                <div class="card group hover:shadow-custom-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-error-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-error" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6Z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-playfair text-xl font-bold text-primary">Kişisel Yaralanma</h3>
+                            <span class="text-sm text-accent font-semibold">12 Kaynak</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
+                            <span class="text-secondary-700">Kazadan Sonra Ne Yapılmalı</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
+                            <span class="text-secondary-700">Tıbbi Kayıt Kontrol Listesi</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
+                            <span class="text-secondary-700">Anlaşma Müzakeresi Rehberi</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
+                            <span class="text-secondary-700">Sigorta Talep Şablonları</span>
+                        </li>
+                    </ul>
+                    <button class="text-accent font-semibold hover:text-accent-700 transition-custom">
+                        Tüm Kaynakları Görüntüle →
+                    </button>
+                </div>
+
+                <!-- Family Law Resources -->
+                <div class="card group hover:shadow-custom-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M16 4C16.55 4 17 4.45 17 5V8.5C17 9.33 16.33 10 15.5 10S14 9.33 14 8.5V7H10V8.5C10 9.33 9.33 10 8.5 10S7 9.33 7 8.5V5C7 4.45 7.45 4 8 4S9 4.45 9 5V5.5H15V5C15 4.45 15.45 4 16 4Z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-playfair text-xl font-bold text-primary">Aile Hukuku</h3>
+                            <span class="text-sm text-accent font-semibold">15 Kaynak</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
+                            <span class="text-secondary-700">Boşanma Süreci Rehberi</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
+                            <span class="text-secondary-700">Çocuk Velayeti Temelleri</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
+                            <span class="text-secondary-700">Mal Paylaşımı Çalışma Sayfası</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
+                            <span class="text-secondary-700">Evlilik Öncesi Sözleşme Rehberi</span>
+                        </li>
+                    </ul>
+                    <button class="text-accent font-semibold hover:text-accent-700 transition-custom">
+                        Tüm Kaynakları Görüntüle →
+                    </button>
+                </div>
+
+                <!-- Business Law Resources -->
+                <div class="card group hover:shadow-custom-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 7V3H2V21H22V7H12ZM6 19H4V17H6V19ZM6 15H4V13H6V15ZM6 11H4V9H6V11ZM6 7H4V5H6V7ZM10 19H8V17H10V19ZM10 15H8V13H10V15ZM10 11H8V9H10V11ZM10 7H8V5H10V7ZM20 19H12V17H20V19ZM20 15H12V13H20V15ZM20 11H12V9H20V11Z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-playfair text-xl font-bold text-primary">İş Hukuku</h3>
+                            <span class="text-sm text-accent font-semibold">18 Kaynak</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
+                            <span class="text-secondary-700">İşletme Kurma Rehberi</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
+                            <span class="text-secondary-700">Sözleşme Şablonları</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
+                            <span class="text-secondary-700">İş Hukuku Temelleri</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-success mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
+                            <span class="text-secondary-700">Fikri Mülkiyet Rehberi</span>
+                        </li>
+                    </ul>
+                    <button class="text-accent font-semibold hover:text-accent-700 transition-custom">
+                        Tüm Kaynakları Görüntüle →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-3xl lg:text-4xl font-bold text-primary mb-4">Sık Sorulan Sorular</h2>
+                <p class="text-xl text-secondary-600">Yaygın hukuki sorulara anında yanıtlar alın</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="space-y-6">
+                    <!-- FAQ Item 1 -->
+                    <div class="card">
+                        <button class="w-full text-left flex justify-between items-center" onclick="toggleFAQ(1)">
+                            <h3 class="font-playfair text-lg font-bold text-primary">Hukuki temsil maliyeti ne kadar?
+                            </h3>
+                            <svg class="w-5 h-5 text-secondary-600 transform transition-transform" id="faq-icon-1"
+                                fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                            </svg>
+                        </button>
+                        <div class="mt-4 hidden" id="faq-content-1">
+                            <p class="text-secondary-600">Hukuki ücretler, dava karmaşıklığı, avukat deneyimi ve çalışma
+                                alanına göre değişir. Ücretsiz danışmanlığınız sırasında detaylı tahminlerle şeffaf
+                                fiyatlandırma sunuyoruz. Birçok dava kazanma üzerine ele alınır, yani sadece kazanırsak
+                                ödeme yaparsınız.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="card">
+                        <button class="w-full text-left flex justify-between items-center" onclick="toggleFAQ(2)">
+                            <h3 class="font-playfair text-lg font-bold text-primary">Ne zaman bir avukatla iletişime
+                                geçmeliyim?</h3>
+                            <svg class="w-5 h-5 text-secondary-600 transform transition-transform" id="faq-icon-2"
+                                fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                            </svg>
+                        </button>
+                        <div class="mt-4 hidden" id="faq-content-2">
+                            <p class="text-secondary-600">Hukuki bir sorun olduğunu fark ettiğinizde hemen bir avukatla
+                                iletişime geçin. Erken danışmanlık, sorunların büyümesini önleyebilir ve haklarınızı
+                                koruyabilir. Birçok durumda zaman sınırı vardır, bu yüzden hızlı hareket etmek çok
+                                önemlidir.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="card">
+                        <button class="w-full text-left flex justify-between items-center" onclick="toggleFAQ(3)">
+                            <h3 class="font-playfair text-lg font-bold text-primary">Danışmanlığıma ne getirmeliyim?
+                            </h3>
+                            <svg class="w-5 h-5 text-secondary-600 transform transition-transform" id="faq-icon-3"
+                                fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                            </svg>
+                        </button>
+                        <div class="mt-4 hidden" id="faq-content-3">
+                            <p class="text-secondary-600">Davanızla ilgili tüm ilgili belgeleri, yazışmaları,
+                                sözleşmeleri ve kanıtları getirin. Olayların zaman çizelgesi ve soru listesi,
+                                danışmanlık sürenizi maksimize etmenize yardımcı olacaktır. Randevu aldığınızda size
+                                özel bir kontrol listesi sağlayacağız.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- FAQ Item 4 -->
+                    <div class="card">
+                        <button class="w-full text-left flex justify-between items-center" onclick="toggleFAQ(4)">
+                            <h3 class="font-playfair text-lg font-bold text-primary">Hukuki davalar genellikle ne kadar
+                                sürer?</h3>
+                            <svg class="w-5 h-5 text-secondary-600 transform transition-transform" id="faq-icon-4"
+                                fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                            </svg>
+                        </button>
+                        <div class="mt-4 hidden" id="faq-content-4">
+                            <p class="text-secondary-600">Dava süresi, karmaşıklık, mahkeme programları ve anlaşmaya
+                                varılıp varılmadığına göre önemli ölçüde değişir. Basit konular haftalar içinde
+                                çözülebilirken, karmaşık davalar yıllar sürebilir. Danışmanlık sırasında gerçekçi zaman
+                                çizelgeleri sağlıyoruz.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="card">
+                        <button class="w-full text-left flex justify-between items-center" onclick="toggleFAQ(5)">
+                            <h3 class="font-playfair text-lg font-bold text-primary">Hukuki konumu avukat olmadan
+                                halledebilir miyim?</h3>
+                            <svg class="w-5 h-5 text-secondary-600 transform transition-transform" id="faq-icon-5"
+                                fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                            </svg>
+                        </button>
+                        <div class="mt-4 hidden" id="faq-content-5">
+                            <p class="text-secondary-600">Bazı basit hukuki konular kendi başınıza halledilebilse de,
+                                çoğu profesyonel temsilden faydalanır. Kaynak merkezimiz kendi kendine yardım araçları
+                                sağlar, ancak karmaşık konular çıkarlarınızı korumak ve optimal sonuçlar elde etmek için
+                                hukuki uzmanlık gerektirir.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="card">
+                        <button class="w-full text-left flex justify-between items-center" onclick="toggleFAQ(6)">
+                            <h3 class="font-playfair text-lg font-bold text-primary">DH HUKUK BÜROSU'nu farklı kılan
+                                nedir?</h3>
+                            <svg class="w-5 h-5 text-secondary-600 transform transition-transform" id="faq-icon-6"
+                                fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                            </svg>
+                        </button>
+                        <div class="mt-4 hidden" id="faq-content-6">
+                            <p class="text-secondary-600">Hukuki mükemmelliği müşteri eğitimi, şeffaf fiyatlandırma ve
+                                kapsamlı destekle birleştiriyoruz. Kaynak merkezimiz müşterileri bilgiyle
+                                güçlendirirken, deneyimli avukatlarımız şefkatli savunuculukla olağanüstü sonuçlar
+                                sunar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-secondary-600 mb-6">Aradığınız yanıtı bulamıyor musunuz?</p>
+                <a href="consultation_booking.html" class="btn-primary">Hukuki Uzmanlarımıza Sorun</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Forum Preview -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-playfair text-3xl lg:text-4xl font-bold text-primary mb-6">
+                        Topluluk Hukuki Forumu
+                    </h2>
+                    <p class="text-xl text-secondary-600 mb-8">
+                        Benzer hukuki zorluklarla karşılaşan diğerleriyle bağlantı kurun. Denetimli topluluk forumumuzda
+                        akran desteği ve profesyonel rehberlik alın.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <svg class="w-6 h-6 text-success mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
+                            <span class="text-secondary-700">Avukat denetimli tartışmalar</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-6 h-6 text-success mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
+                            <span class="text-secondary-700">Akran desteği ve paylaşılan deneyimler</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-6 h-6 text-success mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
+                            <span class="text-secondary-700">Anonim gönderim seçenekleri mevcut</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary" onclick="joinForum()">Tartışmaya Katıl</button>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Forum Post 1 -->
+                    <div class="card">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
+                                <span class="text-primary font-semibold">JS</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center space-x-2 mb-2">
+                                    <h4 class="font-semibold text-primary">Jennifer S.</h4>
+                                    <span class="text-sm text-secondary-500">2 hours ago</span>
+                                    <span class="bg-accent-100 text-accent px-2 py-1 rounded text-xs">Aile Hukuku</span>
+                                </div>
+                                <p class="text-secondary-700 mb-3">Çocuk velayeti değişikliği konusunda tavsiye
+                                    arıyorum. Eski eşim başka bir şehre taşınmak istiyor. Seçeneklerim neler?</p>
+                                <div class="flex items-center space-x-4 text-sm text-secondary-500">
+                                    <span>👍 12 faydalı</span>
+                                    <span>💬 8 yanıt</span>
+                                    <span class="text-success">✓ Avukat yanıtladı</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Forum Post 2 -->
+                    <div class="card">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-accent-100 rounded-full flex items-center justify-center">
+                                <span class="text-accent font-semibold">MT</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center space-x-2 mb-2">
+                                    <h4 class="font-semibold text-primary">Mike T.</h4>
+                                    <span class="text-sm text-secondary-500">5 hours ago</span>
+                                    <span class="bg-error-100 text-error px-2 py-1 rounded text-xs">Kişisel
+                                        Yaralanma</span>
+                                </div>
+                                <p class="text-secondary-700 mb-3">Trafik kazası anlaşma sorusu - sigorta şirketi düşük
+                                    teklif veriyor. Kabul etmeli miyim yoksa daha fazla müzakere etmeli miyim?</p>
+                                <div class="flex items-center space-x-4 text-sm text-secondary-500">
+                                    <span>👍 18 faydalı</span>
+                                    <span>💬 15 yanıt</span>
+                                    <span class="text-success">✓ Avukat yanıtladı</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Webinars -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-3xl lg:text-4xl font-bold text-primary mb-4">Hukuki Eğitim Webinarları
+                </h2>
+                <p class="text-xl text-secondary-600">Uzmanlarımızdan canlı ve kayıtlı eğitim oturumları aracılığıyla
+                    öğrenin</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Upcoming Webinar -->
+                <div class="card group hover:shadow-custom-lg">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2940&auto=format&fit=crop"
+                            alt="Estate Planning webinar" class="w-full h-48 object-cover rounded-lg"
+                            onerror="this.src='https://images.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg'; this.onerror=null;" />
+                        <div
+                            class="absolute top-4 left-4 bg-accent text-primary px-3 py-1 rounded-full text-sm font-semibold">
+                            Canlı - 25 Eylül
+                        </div>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-primary mb-3">Miras Planlaması Temelleri</h3>
+                    <p class="text-secondary-600 mb-4">Ailenizin geleceğini korumak için vasiyet, vasiyetname ve miras
+                        planlaması stratejilerinin temellerini öğrenin.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-secondary-500">19:00 TSİ</span>
+                        <button class="btn-accent text-sm px-4 py-2">Ücretsiz Kayıt Ol</button>
+                    </div>
+                </div>
+
+                <!-- Recorded Webinar 1 -->
+                <div class="card group hover:shadow-custom-lg">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2940&auto=format&fit=crop"
+                            alt="Business law webinar" class="w-full h-48 object-cover rounded-lg"
+                            onerror="this.src='https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-primary mb-3">Küçük İşletme Hukuki Temelleri</h3>
+                    <p class="text-secondary-600 mb-4">Girişimciler için temel hukuki bilgi, kuruluş, sözleşmeler ve
+                        uyumluluk konularını kapsar.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-secondary-500">45 dakika</span>
+                        <button class="text-accent font-semibold hover:text-accent-700 transition-custom">Şimdi İzle
+                            →</button>
+                    </div>
+                </div>
+
+                <!-- Recorded Webinar 2 -->
+                <div class="card group hover:shadow-custom-lg">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2940&auto=format&fit=crop"
+                            alt="Personal injury webinar" class="w-full h-48 object-cover rounded-lg"
+                            onerror="this.src='https://images.pexels.com/photos/5668882/pexels-photo-5668882.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold text-primary mb-3">Kişisel Yaralanma Talep Süreci</h3>
+                    <p class="text-secondary-600 mb-4">Kişisel yaralanma talep sürecinin adım adım rehberi ve neler
+                        bekleneceği.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-secondary-500">38 dakika</span>
+                        <button class="text-accent font-semibold hover:text-accent-700 transition-custom">Şimdi İzle
+                            →</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="btn-secondary">Tüm Webinarları Görüntüle</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <svg class="h-8 w-8 text-accent mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9  11 5.16-1.26 9-5.45 9-11V7l-10-5z" />
+                            <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" fill="none" />
+                        </svg>
+                        <span class="font-playfair text-xl font-bold">DH HUKUK BÜROSU</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Your trusted legal partner providing clarity, transparency, and exceptional results in complex
+                        legal matters.
+                    </p>
+                    <div class="space-y-2">
+                        <p class="text-gray-300">📞 Acil: +90 (212) 123-4567</p>
+                        <p class="text-gray-300">📧 info@hancer.av.tr</p>
+                        <p class="text-gray-300">📍 İstanbul, Türkiye</p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-playfair text-lg font-bold mb-6">Hızlı Bağlantılar</h4>
+                    <ul class="space-y-3">
+                        <li><a href="homepage.html" class="text-gray-300 hover:text-accent transition-custom">Ana
+                                Sayfa</a></li>
+                        <li><a href="case_results.html" class="text-gray-300 hover:text-accent transition-custom">Dava
+                                Sonuçları</a></li>
+                        <li><a href="legal_resource_center.html"
+                                class="text-gray-300 hover:text-accent transition-custom">Hukuki Kaynaklar</a></li>
+                        <li><a href="consultation_booking.html"
+                                class="text-gray-300 hover:text-accent transition-custom">Danışmanlık Al</a></li>
+                        <li><a href="client_portal.html"
+                                class="text-gray-300 hover:text-accent transition-custom">Müşteri Portalı</a></li>
+                    </ul>
+                </div>
+
+                <!-- Practice Areas -->
+                <div>
+                    <h4 class="font-playfair text-lg font-bold mb-6">Çalışma Alanları</h4>
+                    <ul class="space-y-3">
+                        <li><a href="javascript:void(0)"
+                                class="text-gray-300 hover:text-accent transition-custom">Kişisel Yaralanma</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-custom">Aile
+                                Hukuku</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-custom">İş
+                                Hukuku</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-custom">Miras
+                                Planlaması</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-accent transition-custom">Ceza
+                                Savunması</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8">
+                <div class="mb-6 p-4 bg-gray-800 rounded-lg">
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        <strong>www.hancer.av.tr</strong> Herhangi bir şekilde hukuki görüş veya dayanak olarak
+                        kullanılmamalıdır. İçerikler güncelliğini yitirebilir ve yürürlükte olan mevzuat veya hukuki
+                        uygulamaların son halini yansıtmayabilir. Bu nedenle DH HUKUK BÜROSU bu sitede yer alan
+                        bilgilerdeki herhangi bir yanlışlık veya eksiklikten veya bu bilgilerin kullanımından doğan
+                        sonuçlardan sorumlu tutulamaz, ziyaretçiler sunulan içeriklerin doğru olmadığını veya bu
+                        içerikler nedeniyle zarar gördüklerini iddia edemezler. Bu sitedeki tüm bilgi ve dosyaların
+                        mülkiyeti DH HUKUK BÜROSU'na ait olup, yazılı iznimiz olmadan kopyalanamaz, çoğaltılamaz ve
+                        kullanılmaz. DH HUKUK BÜROSU tarafından açıkça yazılı şekilde izin verilmediği sürece, bu sitede
+                        yeni linkler açılması ve/veya bu siteye link yaratılması kesinlikle yasaktır.
+                    </p>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400">© 2025 DH HUKUK BÜROSU. Tüm Hakları Saklıdır.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-accent transition-custom">Gizlilik
+                            Politikası</a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-accent transition-custom">Hizmet
+                            Şartları</a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-accent transition-custom">Etik</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Consultation Button (Mobile) -->
+    <div class="fixed bottom-4 right-4 md:hidden z-50">
+        <a href="consultation_booking.html" class="btn-accent shadow-custom-lg">
+            📞 Ücretsiz Danışmanlık
+        </a>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function openCostCalculator() {
+            alert('Maliyet Hesaplayıcısı: Hukuki ihtiyacınızı seçin ve anında tahmin alın. Bu etkileşimli araç, dava karmaşıklığı ve gerekli hizmetlere göre potansiyel maliyetleri anlamanıza yardımcı olur.');
+        }
+
+        function showDocumentTemplates() {
+            alert('Belge Şablonları: Sözleşmeler, vasiyetler, işletme kuruluş belgeleri ve daha fazlasını içeren ücretsiz hukuki şablon kütüphanemize erişin. Tüm şablonlar avukat tarafından incelenmiş ve duruma özeldir.');
+        }
+
+        function startAssessment() {
+            alert('Hukuki Değerlendirme Aracı: Hukuki durumunuzu değerlendirmek ve sonraki adımlar ve kaynaklar için kişiselleştirilmiş öneriler almak için rehberli soruları yanıtlayın.');
+        }
+
+        function viewChecklists() {
+            alert('Hukuki Kontrol Listeleri: Boşanma, işletme kuruluşu, miras planlaması ve daha fazlası dahil olmak üzere çeşitli hukuki süreçler için adım adım hazırlık rehberleri.');
+        }
+
+        function filterResources(category) {
+            // Update active filter button
+            const buttons = document.querySelectorAll('button[onclick^="filterResources"]');
+            buttons.forEach(btn => {
+                btn.className = 'px-6 py-3 bg-gray-200 text-secondary-700 rounded-lg font-semibold hover:bg-gray-300 transition-custom';
+            });
+            event.target.className = 'px-6 py-3 bg-primary text-white rounded-lg font-semibold';
+
+            alert(`${category} kategorisine göre kaynakları filtreleme. Bu, karmaşıklık seviyesi ve çalışma alanına göre ilgili kaynakları gösterecektir.`);
+        }
+
+        function toggleFAQ(id) {
+            const content = document.getElementById(`faq-content-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(45deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        function joinForum() {
+            alert('Benzer hukuki zorluklarla karşılaşan diğerleriyle bağlantı kurmak için topluluk forumumuza katılın. Denetimli topluluğumuzdan akran desteği ve profesyonel rehberlik alın.');
+        }
+
+        function changeLanguage(lang) {
+            // Dil değiştirme fonksiyonu
+            const currentPage = window.location.pathname.split('/').pop();
+            let targetPage = '';
+
+            switch (lang) {
+                case 'tr':
+                    targetPage = currentPage;
+                    break;
+                case 'en':
+                    targetPage = currentPage.replace('.html', '_en.html');
+                    break;
+                case 'de':
+                    targetPage = currentPage.replace('.html', '_de.html');
+                    break;
+                case 'ru':
+                    targetPage = currentPage.replace('.html', '_ru.html');
+                    break;
+                default:
+                    targetPage = currentPage;
+            }
+
+            // Dil tercihini localStorage'a kaydet
+            localStorage.setItem('preferred-language', lang);
+
+            // Sayfa yönlendirmesi (şimdilik alert göster)
+            alert(`Dil değiştirildi: ${lang.toUpperCase()}\n\nBu özellik geliştirilme aşamasındadır. Çok dilli sayfalar yakında eklenecektir.`);
+
+            // Gerçek uygulamada şu şekilde yönlendirme yapılabilir:
+            // window.location.href = targetPage;
+        }
+
+        // Sayfa yüklendiğinde kaydedilen dil tercihini yükle
+        document.addEventListener('DOMContentLoaded', function () {
+            const savedLanguage = localStorage.getItem('preferred-language');
+            if (savedLanguage) {
+                const desktopSelector = document.getElementById('language-selector');
+                const mobileSelector = document.getElementById('mobile-language-selector');
+
+                if (desktopSelector) desktopSelector.value = savedLanguage;
+                if (mobileSelector) mobileSelector.value = savedLanguage;
+            }
+        });
+    </script>
+    <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+
+</html>
